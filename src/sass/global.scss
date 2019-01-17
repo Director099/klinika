@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 300 $fz "Arial", sans-serif;
+  color: $text-color;
+}
+
+a {
+  cursor: pointer;
+  transition: $time;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  transition: $time;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
