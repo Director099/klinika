@@ -1,0 +1,23 @@
+.form {
+
+}
+
+.form__row {
+  @include make-row();
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.form__col-7 {
+  @include make-col-ready();
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 290px;
+}
+
+.form__col-5 {
+  @include make-col-ready();
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 262px;
+}

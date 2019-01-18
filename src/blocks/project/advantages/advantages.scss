@@ -1,0 +1,40 @@
+.advantages {
+  @include ul-none();
+  @include make-row()
+  counter-reset: section;
+}
+
+.advantages__item {
+  @include make-col-ready();
+  @include make-col(3);
+}
+
+.advantages__title {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #36a3c6;
+  padding-top: 25px;
+  z-index: 1;
+
+  &::after {
+    counter-increment: section;
+    content: "0" counter(section);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 100px;
+    font-weight: 700;
+    color: #f2f5fa;
+    z-index: -1;
+  }
+}
+
+.advantages__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666666;
+}

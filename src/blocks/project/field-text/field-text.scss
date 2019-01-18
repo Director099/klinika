@@ -1,0 +1,36 @@
+.field-text {
+  display: block;
+  width: 100%;
+  // margin-bottom: 13px;
+  margin-bottom: 18px;
+}
+
+.field-text__input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 9px 10px 9px 50px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  font-family: $font-1;
+  background-color: $white;
+  border: 1px solid #fbfbfb;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 50px;
+  appearance: textfield;
+
+  &--tel {
+    background: $white url("../img/call-answer.png") no-repeat 18px 50%;
+  }
+
+  &--name {
+    // background: $white url("../img/icon/icon-user.svg") no-repeat 23px 50%;
+  }
+
+  &--message {
+    // background: $white url("../img/icon/icon-message.svg") no-repeat 20px 18px;
+    min-height: 102px;
+  }
+}
