@@ -2059,6 +2059,7 @@ img {
     font-size: 36px;
     font-weight: 400;
     color: #333333;
+    margin-bottom: 15px;
 }
 
 .title span {
@@ -2342,8 +2343,10 @@ input:checked + .form-checkbox__check::after {
     font-weight: 700;
     line-height: 25px;
     color: #36a3c6;
-    padding-top: 40px;
+    padding-top: 25px;
     z-index: 1;
+    max-width: 200px;
+    margin-bottom: 11px;
 }
 
 .advantages__title::after {
@@ -2359,6 +2362,7 @@ input:checked + .form-checkbox__check::after {
 }
 
 .advantages__text {
+    max-width: 255px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -2369,6 +2373,75 @@ input:checked + .form-checkbox__check::after {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    max-width: 600px;
+    margin-bottom: 29px;
+}
+
+.excellence__item {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 53px;
+}
+
+.excellence__wrap {
+    position: relative;
+    padding-left: 35px;
+}
+
+.excellence__circle {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    display: block;
+    width: 2px;
+    height: calc(100% - 15px);
+    margin-top: 15px;
+    background-color: #36a3c6;
+}
+
+.excellence__circle::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background-color: #36a3c6;
+    border-radius: 50%;
+}
+
+.excellence__circle::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    border: 5px solid #36a3c6;
+    border-radius: 50px;
+}
+
+.excellence__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #666666;
+}
+
+.excellence__text strong {
+    color: #333333;
+    font-weight: 500;
 }
 
 .section {
@@ -2376,8 +2449,100 @@ input:checked + .form-checkbox__check::after {
     padding-bottom: 85px;
 }
 
-.section__center {
+.section__header {
+    margin-bottom: 100px;
+}
+
+.section__header--center {
     text-align: center;
+}
+
+.about {
+    padding-top: 88px;
+    padding-bottom: 61px;
+}
+
+.services {
+    padding-top: 82px;
+    background: #f4f7f9;
+}
+
+.review__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.review__col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.review__title {
+    font-size: 27px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.review__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #666666;
+    margin-bottom: 52px;
+}
+
+.price-list__title {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 16px 55px 16px 42px;
+    color: black;
+    background: white;
+    border-radius: 50px;
+}
+
+.price-list__collapse {
+    width: calc(100% - 45px);
+    margin: 0 auto;
+    padding: 20px;
+    background: #fbfbfb;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+    border-radius: 0 0 25px 25px;
+    border: 1px solid #fbfbfb;
+}
+
+.table {
+    margin: 0;
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td, .table th {
+    padding: 15px 20px;
+    vertical-align: top;
+    border-bottom: 1px solid black;
+}
+
+.table tbody:last-child tr:last-child td, .table tbody:last-child tr:last-child th, .table thead:last-child tr:last-child td, .table thead:last-child tr:last-child th, .table tfoot:last-child tr:last-child td, .table tfoot:last-child tr:last-child th {
+    border-bottom: 0;
+}
+
+.table caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1em;
 }
 
 @media (min-width: 576px) {

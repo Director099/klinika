@@ -3,6 +3,10 @@
   padding-bottom: 85px;
 }
 
-.section__center {
-  text-align: center;
+.section__header {
+  margin-bottom: 100px;
+
+  &--center {
+    text-align: center;
+  }
 }

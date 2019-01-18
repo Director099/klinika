@@ -35,21 +35,26 @@ block content
   main
     .section.about
       .container
-        h2.title Клиника #[span на Курской]
-        p.tagline Специализированный медицинский центр
+        .section__header
+          h2.title Клиника #[span на Курской]
+          p.tagline Специализированный медицинский центр
         ul.excellence
           li.excellence__item
-            span.excellence__circle
-            p.excellence__text Современный медицинский центр, входящий в группу компаний "Генезис".
+            .excellence__wrap
+              span.excellence__circle
+              p.excellence__text #[strong Современный медицинский центр,] входящий в группу компаний "Генезис".
           li.excellence__item
-            span.excellence__circle
-            p.excellence__text Основная специализация центра - амбулатурный прием пациентов, медицинская диагностика, проведение медицинских осмотров и выдача официальных заключений и справок.
+            .excellence__wrap
+              span.excellence__circle
+              p.excellence__text #[strong Основная специализация центра -] амбулатурный прием пациентов, медицинская диагностика, проведение медицинских осмотров и выдача официальных заключений и справок.
           li.excellence__item
-            span.excellence__circle
-            p.excellence__text Врачи центра - специалисты высшей категории с многолетним опытом работы, сертифицированые по специальности профпатология.
+            .excellence__wrap
+              span.excellence__circle
+              p.excellence__text #[strong Врачи центра - специалисты высшей категории] с многолетним опытом работы, сертифицированые по специальности профпатология.
           li.excellence__item
-            span.excellence__circle
-            p.excellence__text Центр оснащен всем необходимым современным оборудованием.
+            .excellence__wrap
+              span.excellence__circle
+              p.excellence__text Центр оснащен всем необходимым #[strong современным оборудованием.]
         ol.advantages
           li.advantages__item
             strong.advantages__title На протяжении уже более 10 лет
@@ -63,39 +68,39 @@ block content
           li.advantages__item
             strong.advantages__title 300 медицинских справок
             p.advantages__text Выдаем каждый день, работаем 7 дней в неделю
-    //- .section.services
-    //-   .container
-    //-     section.section__center
-    //-       h2.title Наши услуги
-    //-       p.tagline Ознакомьтесь со списком услуг, которые мы предоставляем
-    //-     .review
-    //-       .review__row
-    //-         section.review__col
-    //-           h3.review__title Выдача медицинских справок
-    //-           p.review__text Медицинские справки требуются почти при любой жизненной ситуации. Каждый из нас устраивался на новую работу, поступал в учебное заведение, пропускал занятия, из за болезни не ходил на работу, сдавал анализы для бассейна.
-    //-           form.form
-    //-             .form__row
-    //-               label.field-text
-    //-                 input.field-text__input(type="tel")
-    //-               button.btn.btn--main Записаться без очереди
-    //-             label.form-checkbox
-    //-               input(type="checkbox" required checked)
-    //-               span.form-checkbox__check(aria-label="Согласие на обработку данных")
-    //-               span.form-checkbox__text Я даю свое согласие на обработку персональных данных
-    //-         .review__col
-    //-     .price-list
-    //-       a(data-toggle="collapse" href="#collaps-1" role="button") Стоимость оформления медицинских справок
-    //-       .collapse  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem sunt rerum soluta et unde aliquam modi ducimus laboriosam tenetur deserunt, ratione nobis animi saepe fuga similique rem, quam itaque aspernatur.
-    //- .section.licenses
-    //-   .container
-    //-     section.section__center
-    //-       h2.title Имеем #[span допуски и лицензии] на все необходимые медицинские работы
-    //-     .licenses__slider
-    //-       .licenses__item
-    //-       .licenses__item
-    //-       .licenses__item
-    //-       .licenses__item
-    //- .section.contacts
+    .section.services
+      .container
+        section.section__header.section__header--center
+          h2.title Наши #[span услуги]
+          p.tagline Ознакомьтесь со списком услуг, которые мы предоставляем
+        .review
+          .review__row
+            section.review__col
+              h3.review__title Выдача медицинских справок
+              p.review__text Медицинские справки требуются почти при любой жизненной ситуации. Каждый из нас устраивался на новую работу, поступал в учебное заведение, пропускал занятия, из за болезни не ходил на работу, сдавал анализы для бассейна.
+              form.form
+                .form__row
+                  .form__col-7
+                    label.field-text
+                      input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __")
+                  .form__col-5
+                    button.btn.btn--main Записаться без очереди
+                label.form-checkbox
+                  input(type="checkbox" required checked)
+                  span.form-checkbox__check(aria-label="Согласие на обработку данных")
+                  span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#")  персональных данных]
+            .review__col
+          +price-list()
+    .section.licenses
+      .container
+        section.section__center
+          h2.title Имеем #[span допуски и лицензии] на все необходимые медицинские работы
+        .licenses__slider
+          .licenses__item
+          .licenses__item
+          .licenses__item
+          .licenses__item
+    .section.contacts
       .container
         .section__row
           .section__col

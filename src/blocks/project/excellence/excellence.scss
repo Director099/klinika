@@ -1,3 +1,62 @@
 .excellence {
   @include ul-none();
+  @include make-row();
+  max-width: 600px;
+  margin-bottom: 29px;
+}
+
+.excellence__item {
+  @include make-col-ready();
+  @include make-col(6);
+  margin-bottom: 53px;
+}
+
+.excellence__wrap {
+  position: relative;
+  padding-left: 35px;
+}
+
+.excellence__circle {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  display: block;
+  width: 2px;
+  height: calc(100% - 15px);
+  margin-top: 15px;
+  background-color: #36a3c6;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background-color: #36a3c6;
+    border-radius: 50%
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    border: 5px solid #36a3c6;
+    border-radius: 50px;
+  }
+}
+
+.excellence__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666;
+
+  strong {
+    color: #333;
+    font-weight: 500;
+  }
 }

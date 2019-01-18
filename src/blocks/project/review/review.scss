@@ -1,0 +1,27 @@
+.review {
+
+}
+
+.review__row {
+  @include make-row();
+}
+
+.review__col {
+  @include make-col-ready();
+  @include make-col(6);
+}
+
+.review__title {
+  font-size: 27px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.review__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #666;
+  margin-bottom: 52px;
+}
