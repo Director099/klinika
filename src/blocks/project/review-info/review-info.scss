@@ -1,16 +1,27 @@
 .review-info {
+  max-width: 456px;
+  margin-left: auto;
+  margin-bottom: 55px;
+
+  &--head {
+    margin-left: initial;
+    max-width: 794px;
+    margin-bottom: 0;
+  }
+}
+
+.review-info__list {
   @include ul-none();
   @include make-row();
 
-  &--head {
-    max-width: 824px;
+  &--jc-sb {
     justify-content: space-between;
   }
 }
 
 .review-info__item-3 {
   @include make-col-ready();
-  @include make-col(3);
+  // @include make-col(3);
   max-width: 200px;
 }
 
@@ -19,6 +30,11 @@
   @include make-col-ready();
   // @include make-col(5);
   max-width: 355px;
+}
+
+.review-info__item-6 {
+  @include make-col-ready();
+  @include make-col(6);
 }
 
 .review-info span {

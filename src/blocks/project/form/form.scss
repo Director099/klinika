@@ -8,6 +8,13 @@
   margin-right: -10px;
 }
 
+.form__col {
+  @include make-col-ready();
+  @include make-col(6);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .form__col-7 {
   @include make-col-ready();
   padding-left: 10px;

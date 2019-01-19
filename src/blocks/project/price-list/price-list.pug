@@ -2,48 +2,54 @@ mixin price-list()
   .price-list
     a.price-list__title(data-toggle="collapse" href="#collaps-1" role="button") Стоимость оформления медицинских справок
     .collapse.price-list__collapse(id="collaps-1")
-      table.table
+      table.table.price-list__table
         caption.table__caption Справки для работы
         tr
           td 1. Справка 302Н для работы
-          td #[span 1500] руб
-        tr
-          td 2. Справка 302Н для работы
           td #[span 1500] руб.
         tr
-          td 3. Справка 302Н для работы
+          td 2. Справка 086У для работы
           td #[span 1500] руб.
         tr
-          td 4. Справка 302Н для работы
+          td 3. Водительская справка для работы
           td #[span 1500] руб.
         tr
-          td 5. Справка 302Н для работы
+          td 4. Справка от нарколога для работы
           td #[span 1500] руб.
         tr
-          td 6. Справка 302Н для работы
+          td 5. Справка от психиатра для работы
           td #[span 1500] руб.
         tr
-          td 7. Справка 302Н для работы
+          td 6. Справка 002ОУ для работы
           td #[span 1500] руб.
         tr
-          td 8. Справка 302Н для работы
+          td 7. Справка 003ОУ для работы
           td #[span 1500] руб.
-      table.table
+        tr
+          td 8. Справка ХТИ для работы
+          td #[span 1500] руб.
+      table.table.price-list__table
         caption.table__caption Справки охранникам
         tr
           td 1. Справка 002ОУ охранникам
-          td #[span 1500] руб
+          td #[span 1500] руб.
         tr
           td 2. Справка 003ОУ охранникам
           td #[span 1500] руб.
         tr
           td 3. Справка ХТИ охранникам
           td #[span 1500] руб
-      table.table
+        tr
+          td 4. Справка от нарколога охранникам
+          td #[span 1500] руб
+        tr
+          td 5. Справка от психиатра охранникам
+          td #[span 1500] руб
+      table.table.price-list__table
         caption.table__caption Справки студентам
         tr
           td 1. Справка 086У в ВУЗ
-          td #[span 1500] руб
+          td #[span 1500] руб.
         tr
           td 2. Справка 095У в ВУЗ
           td #[span 1500] руб.

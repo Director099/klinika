@@ -26,11 +26,13 @@
   }
 
   &--name {
-    // background: $white url("../img/icon/icon-user.svg") no-repeat 23px 50%;
+    background: $white url("../img/icon-user.png") no-repeat 19px 50%;
   }
 
   &--message {
-    // background: $white url("../img/icon/icon-message.svg") no-repeat 20px 18px;
-    min-height: 102px;
+    background: $white url("../img/icon-message.png") no-repeat 20px 16px;
+    min-height: 125px;
+    resize: none;
+    border-radius: 25px;
   }
 }

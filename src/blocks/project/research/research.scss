@@ -1,0 +1,12 @@
+.research {
+  padding-top: 125px;
+  padding-bottom: 94px;
+  background-image: url("../img/bg-research.png");
+  background-repeat: no-repeat;
+  background-position: -288px 0;
+  background-color: #e9f0f5;
+
+  @media (min-width: 1400px) {
+    background-position: 100% 0;
+  }
+}

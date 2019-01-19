@@ -1992,6 +1992,56 @@ img {
     margin-left: auto;
 }
 
+.table {
+    margin: 0;
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td, .table th {
+    padding: 17px 36px;
+    vertical-align: top;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.table td span, .table th span {
+    color: #36a3c6;
+    font-weight: 700;
+}
+
+.table td:last-child, .table th:last-child {
+    text-align: right;
+}
+
+.table tbody:last-child tr:last-child td, .table tbody:last-child tr:last-child th, .table thead:last-child tr:last-child td, .table thead:last-child tr:last-child th, .table tfoot:last-child tr:last-child td, .table tfoot:last-child tr:last-child th {
+    border-bottom: 0;
+}
+
+.table caption {
+    position: relative;
+    caption-side: top;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 55px;
+    margin-left: -55px;
+    margin-bottom: 5px;
+    line-height: 1em;
+}
+
+.table caption::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #36a3c6;
+    margin-top: 1px;
+}
+
 .logo {
     display: block;
     max-width: 159px;
@@ -2057,6 +2107,7 @@ img {
 
 .title {
     font-size: 36px;
+    line-height: 48px;
     font-weight: 400;
     color: #333333;
     margin-bottom: 15px;
@@ -2101,8 +2152,15 @@ img {
     background: white url("../img/call-answer.png") no-repeat 18px 50%;
 }
 
+.field-text__input--name {
+    background: white url("../img/icon-user.png") no-repeat 19px 50%;
+}
+
 .field-text__input--message {
-    min-height: 102px;
+    background: white url("../img/icon-message.png") no-repeat 20px 16px;
+    min-height: 125px;
+    resize: none;
+    border-radius: 25px;
 }
 
 .form-checkbox {
@@ -2177,6 +2235,20 @@ input:checked + .form-checkbox__check::after {
     margin-right: -10px;
 }
 
+.form__col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .form__col-7 {
     position: relative;
     width: 100%;
@@ -2200,6 +2272,18 @@ input:checked + .form-checkbox__check::after {
 }
 
 .review-info {
+    max-width: 456px;
+    margin-left: auto;
+    margin-bottom: 55px;
+}
+
+.review-info--head {
+    margin-left: initial;
+    max-width: 794px;
+    margin-bottom: 0;
+}
+
+.review-info__list {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -2209,8 +2293,7 @@ input:checked + .form-checkbox__check::after {
     margin-left: -15px;
 }
 
-.review-info--head {
-    max-width: 824px;
+.review-info__list--jc-sb {
     justify-content: space-between;
 }
 
@@ -2220,10 +2303,6 @@ input:checked + .form-checkbox__check::after {
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    flex: 0 0 25%;
-    max-width: 25%;
-    padding-left: 15px;
-    padding-right: 15px;
     max-width: 200px;
 }
 
@@ -2234,6 +2313,18 @@ input:checked + .form-checkbox__check::after {
     padding-right: 15px;
     padding-left: 15px;
     max-width: 355px;
+}
+
+.review-info__item-6 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .review-info span {
@@ -2457,14 +2548,42 @@ input:checked + .form-checkbox__check::after {
     text-align: center;
 }
 
+.section__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.section__row--jc-sb {
+    justify-content: space-between;
+}
+
+.section__col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 560px;
+}
+
 .about {
     padding-top: 88px;
     padding-bottom: 61px;
+    background-image: url("../img/about-clinics.png");
+    background-repeat: no-repeat;
+    background-position: 690px -6px;
 }
 
 .services {
     padding-top: 82px;
+    padding-bottom: 89px;
     background: #f4f7f9;
+}
+
+.review {
+    margin-bottom: 10px;
 }
 
 .review__row {
@@ -2472,6 +2591,10 @@ input:checked + .form-checkbox__check::after {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+.review__row--ai-c {
+    align-items: center;
 }
 
 .review__col {
@@ -2488,6 +2611,7 @@ input:checked + .form-checkbox__check::after {
 
 .review__title {
     font-size: 27px;
+    line-height: 37px;
     font-weight: 500;
     color: #333333;
     margin-bottom: 20px;
@@ -2501,48 +2625,142 @@ input:checked + .form-checkbox__check::after {
     margin-bottom: 52px;
 }
 
+.review__img {
+    display: block;
+    margin-left: auto;
+    margin-top: -60px;
+}
+
 .price-list__title {
     display: block;
     font-size: 16px;
     font-weight: 400;
     padding: 16px 55px 16px 42px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
     color: black;
     background: white;
     border-radius: 50px;
 }
 
+.price-list__title:hover {
+    color: black;
+}
+
 .price-list__collapse {
     width: calc(100% - 45px);
     margin: 0 auto;
-    padding: 20px;
+    padding: 33px 23px 23px;
     background: #fbfbfb;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
     border-radius: 0 0 25px 25px;
     border: 1px solid #fbfbfb;
 }
 
-.table {
+.price-list__table {
+    max-width: 970px;
+    margin: 0 auto 20px;
+}
+
+.price-list__table:last-childt {
+    margin-bottom: 0;
+}
+
+.med-book {
+    padding-bottom: 76px;
+    background-color: #e9f0f5;
+}
+
+.commission {
+    padding-top: 110px;
+    padding-bottom: 91px;
+    background-image: url("../img/bg-commission.png");
+    background-repeat: no-repeat;
+    background-position: -284px 0;
+    background-color: #f4f7f9;
+}
+
+.commission__content {
+    max-width: 400px;
+}
+
+.laboratory {
+    background: #f4f7f9;
+}
+
+.research {
+    padding-top: 125px;
+    padding-bottom: 94px;
+    background-image: url("../img/bg-research.png");
+    background-repeat: no-repeat;
+    background-position: -288px 0;
+    background-color: #e9f0f5;
+}
+
+.reception {
+    padding-top: 183px;
+    padding-bottom: 95px;
+    background-image: url("../img/bg-reception.png");
+    background-repeat: no-repeat;
+    background-color: #e9f0f5;
+    background-position: -285px 0;
+}
+
+.licenses {
+    padding-top: 71px;
+    padding-bottom: 99px;
+    background: #fdfefe url("../img/bg-licenses.png") no-repeat center top;
+}
+
+.licenses__header {
+    margin-bottom: 53px;
+}
+
+.contact {
+    padding-top: 73px;
+    background: url("../img/bg-contact.jpg") no-repeat center/cover;
+}
+
+.contact__title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 35px;
+}
+
+.contact__list {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
-    border: 0;
-    border-collapse: collapse;
-    width: 100%;
 }
 
-.table td, .table th {
-    padding: 15px 20px;
-    vertical-align: top;
-    border-bottom: 1px solid black;
+.contact__item {
+    padding-left: 28px;
+    margin-bottom: 22px;
 }
 
-.table tbody:last-child tr:last-child td, .table tbody:last-child tr:last-child th, .table thead:last-child tr:last-child td, .table thead:last-child tr:last-child th, .table tfoot:last-child tr:last-child td, .table tfoot:last-child tr:last-child th {
-    border-bottom: 0;
+.contact__name-address {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: #919191;
+    margin-bottom: 6px;
 }
 
-.table caption {
-    caption-side: top;
-    text-align: left;
+.contact__address {
+    display: block;
     font-size: 16px;
-    line-height: 1em;
+    font-weight: 400;
+    color: #333333;
+}
+
+.contact__desk {
+    display: block;
+    max-width: 400px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #666666;
+    margin: 14px 0 0;
 }
 
 @media (min-width: 576px) {
@@ -2587,6 +2805,26 @@ input:checked + .form-checkbox__check::after {
 @media (min-width: 1200px) {
     .container {
         max-width: 1200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .commission {
+        background-position: 100% 0;
+    }
+
+    .research {
+        background-position: 100% 0;
+    }
+
+    .reception {
+        background-position: 100% 0;
+    }
+}
+
+@media (min-width: 1800px) {
+    .about {
+        background-position: 100% -6px;
     }
 }
 

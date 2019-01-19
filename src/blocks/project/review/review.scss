@@ -1,9 +1,13 @@
 .review {
-
+  margin-bottom: 10px;
 }
 
 .review__row {
   @include make-row();
+
+  &--ai-c {
+    align-items: center;
+  }
 }
 
 .review__col {
@@ -13,6 +17,7 @@
 
 .review__title {
   font-size: 27px;
+  line-height: 37px;
   font-weight: 500;
   color: #333333;
   margin-bottom: 20px;
@@ -24,4 +29,10 @@
   line-height: 23px;
   color: #666;
   margin-bottom: 52px;
+}
+
+.review__img {
+  display: block;
+  margin-left: auto;
+  margin-top: -60px;
 }

@@ -296,3 +296,21 @@ $('input[type=tel]').mask("+7 (000) 000 00 00");
 }); */
 
 // Плавный скол с навигации
+
+$(".licenses__slider").owlCarousel({
+  loop: true,
+  margin: 30,
+  nav: false,
+  dots: false,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:4
+      }
+  }
+})

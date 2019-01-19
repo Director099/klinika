@@ -10,3 +10,16 @@
     text-align: center;
   }
 }
+
+.section__row {
+  @include make-row();
+
+  &--jc-sb {
+    justify-content: space-between;
+  }
+}
+
+.section__col {
+  @include make-col-ready();
+  max-width: 560px;
+}
