@@ -9,7 +9,15 @@
   line-height: 20.02px;
   width: 100%;
 
+
   @media (min-width: $screen-md) {
+    font-size: 11px;
+    line-height: 23px;
+    width: 100%;
+    padding: 9px 27px;
+  }
+
+  @media (min-width: $screen-xl) {
     font-size: 14px;
     line-height: 30px;
     width: auto;

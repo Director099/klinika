@@ -5,8 +5,14 @@
   box-shadow: 0 9px 18px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   background: $white;
+  z-index: 9;
 
   @media (min-width: $screen-md) {
+    padding: 1px 22px 3px 46px;
+    background: $white url("../img/phone.png") no-repeat 8px 50%;
+  }
+
+  @media (min-width: $screen-xl) {
     padding: 5px 25px 5px 47px;
     background: $white url("../img/phone.png") no-repeat 8px 50%;
   }
@@ -20,9 +26,11 @@
   color: #333333;
 
   @media (min-width: $screen-md) {
+    font-size: 13px;
+  }
+
+  @media (min-width: $screen-xl) {
     font-size: 15px;
-    font-weight: 500;
-    line-height: 16px;
   }
 }
 
@@ -31,11 +39,15 @@
 
   @media (min-width: $screen-md) {
     display: block;
-    margin: -2px 0 0;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 400;
     line-height: 16px;
     text-decoration: underline;
     color: #909090;
+    margin: -2px 0 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 10px;
   }
 }

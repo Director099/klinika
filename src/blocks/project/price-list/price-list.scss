@@ -35,8 +35,12 @@
   border: 1px solid #fbfbfb;
 
   @media(min-width: $screen-md) {
-    padding: 33px 23px 23px;
+    padding: 33px 70px 23px;
     width: calc(100% - 45px);
+  }
+
+  @media(min-width: $screen-xl) {
+    padding: 33px 23px 23px;
   }
 }
 

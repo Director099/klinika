@@ -26,9 +26,15 @@
   appearance: textfield;
 
   @media(min-width: $screen-md) {
+    font-size: 11px;
+    line-height: 23px;
+    padding: 9px 10px 7px 44px;
+  }
+
+  @media(min-width: $screen-xl) {
+    padding: 9px 10px 9px 50px;
     font-size: 14px;
     line-height: 30px;
-    padding: 9px 10px 9px 50px;
   }
 
   &--tel {
@@ -51,12 +57,17 @@
 
   &--message {
     background: $white url("../img/icon-message.png") no-repeat 15px 11px / 12px;
-    min-height: 125px;
+    min-height: 84px;
     resize: none;
     border-radius: 25px;
 
     @media(min-width: $screen-md) {
       min-height: 125px;
+      background-size: auto;
+      background-position: 20px 12px;
+    }
+
+    @media(min-width: $screen-xl) {
       background-size: auto;
       background-position: 20px 16px;
     }

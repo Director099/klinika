@@ -6,6 +6,11 @@
     margin-right: auto;
 
     @media(min-width: $screen-md) {
+      max-width: 542px;
+      text-align: left;
+    }
+
+    @media(min-width: $screen-xl) {
       max-width: 100%;
       margin: 0;
     }
@@ -47,6 +52,7 @@
 
   @media (min-width: $screen-md) {
     max-width: 290px;
+    @include make-col(6);
   }
 }
 
@@ -57,5 +63,6 @@
 
   @media (min-width: $screen-md) {
     max-width: 262px;
+     @include make-col(6);
   }
 }

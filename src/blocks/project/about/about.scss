@@ -1,16 +1,31 @@
 .about {
   padding-top: 30px;
   padding-bottom: 5px;
-  background-image: url("../img/about-clinics.png");
-  background-repeat: no-repeat;
-  background-position: 690px -6px;
 
   @media(min-width: $screen-md) {
+    padding-top: 42px;
+    padding-bottom: 0;
+  }
+
+  @media(min-width: $screen-xl) {
+    background-image: url("../img/about-clinics.png");
+    background-repeat: no-repeat;
+    background-position: 690px -6px;
     padding-top: 88px;
-    padding-bottom: 61px;
+    padding-bottom: 41px;
   }
 
   @media(min-width: 1800px) {
     background-position: 100% -6px;
+  }
+}
+
+.about__header {
+  @media(min-width: $screen-md) {
+    text-align: center;
+  }
+
+  @media(min-width: $screen-md) {
+    text-align: left;
   }
 }

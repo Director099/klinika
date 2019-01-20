@@ -1,9 +1,11 @@
 .main-block {
+  position: relative;
   max-width: 550px;
   text-align: center;
 
   @media(min-width: $screen-md) {
     text-align: left;
+
   }
 }
 
@@ -12,6 +14,11 @@
 
   @media(min-width: $screen-md) {
     margin-bottom: 20px;
+    max-width: 460px;
+  }
+
+  @media(min-width: $screen-xl) {
+    max-width: inherit;
   }
 }
 
@@ -21,6 +28,13 @@
   margin-bottom: 19px;
 
   @media(min-width: $screen-md) {
+    line-height: 25px;
+    margin-bottom: 31px;
+    max-width: 460px;
+  }
+
+  @media(min-width: $screen-xl) {
+    max-width: inherit;
     line-height: 25px;
     margin-bottom: 38px;
   }
@@ -33,7 +47,30 @@
   margin-right: auto;
 
   @media(min-width: $screen-md) {
-    max-width: inherit;
+    max-width: 430px;
+    margin: 0 0 58px;
+  }
+
+  @media(min-width: $screen-xl) {
     margin: 0 0 64px;
+    max-width: 550px;
+  }
+}
+
+.main-block__img {
+  display: none;
+
+  @media(min-width: $screen-md) {
+    display: block;
+    position: absolute;
+    right: -330px;
+    top: -25px;
+    max-width: 400px;
+  }
+
+  @media(min-width: $screen-xl) {
+    right: -623px;
+    top: -19px;
+    max-width: 100%;
   }
 }

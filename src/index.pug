@@ -9,6 +9,7 @@ block header
       .main-block
         h1.title.main-block__title Современный #[span медицинский центр] на&nbsp;м. Курская
         p.main-block__text Выдача медицинских справок, оформление медицинских книжек, проведение психиатрического освидетельствования. Амбулаторный прием врачей. УЗИ. Медицинские анализы.
+        img.main-block__img(src="img/img-book.png", alt="Ичная медицинская книжка")
         form.form.main-block__form
           .form__row
             .form__col-7
@@ -36,7 +37,7 @@ block content
   main
     .section.about(id="about")
       .container
-        .section__header
+        .section__header.about__header
           h2.title Клиника #[span на Курской]
           p.tagline Специализированный медицинский центр
         ul.excellence
@@ -75,8 +76,8 @@ block content
           h2.title Наши #[span услуги]
           p.tagline.services__tagline Ознакомьтесь со&nbsp;списком услуг, которые мы&nbsp;предоставляем
         .review
-          .review__row
-            .review__col.review__row--reverse
+          .review__row.review__row--reverse
+            .review__col
               img.review__img(src="img/med-spravka.png", alt="медицинская справка")
             .review__col
               section.review__content
@@ -101,7 +102,9 @@ block content
             li.review-info__item-3
               span время выдачи
               p.review-info__price 15#[sub мин.]
-        +price-list()
+        +price-list(
+          "collapse-1"
+        )
     .section.med-book(id="medknizhki")
       .container
         .review
@@ -131,7 +134,9 @@ block content
             li.review-info__item-3
               span время выдачи
               p.review-info__price 15#[sub мин.]
-        +price-list()
+        +price-list(
+          "collapse-2"
+        )
     .section.commission(id="medkom")
       .container
         .review
@@ -159,7 +164,9 @@ block content
             li.review-info__item-3
               span время выдачи
               p.review-info__price 15#[sub мин.]
-        +price-list()
+        +price-list(
+          "collapse-3"
+        )
     .section.research(id="uzi")
       .container
         .review
@@ -187,7 +194,9 @@ block content
             li.review-info__item-3
               span время выдачи
               p.review-info__price 3#[sub дня]
-        +price-list()
+        +price-list(
+          "collapse-4"
+        )
     .section.laboratory(id="lab")
       .container
         .review
@@ -217,7 +226,9 @@ block content
             li.review-info__item-3
               span время выдачи
               p.review-info__price 15#[sub мин.]
-        +price-list()
+        +price-list(
+          "collapse-5"
+        )
     .section.reception(id="priem")
       .container
         .review
@@ -225,7 +236,7 @@ block content
             .review__col
               section.review__content
                 h3.review__title Амбулаторный прием врачей
-                p.review__text Амбулаторный прием врачей  по следующим специальностям: Терапевт, ЛОР, Хирург, Гинеколог, Дерматолог-венеролог.
+                p.review__text.reception__text Амбулаторный прием врачей  по следующим специальностям: Терапевт, ЛОР, Хирург, Гинеколог, Дерматолог-венеролог.
               form.form.form--center-mb
                 .form__row.form__row--mb-phone
                   .form__col-7
@@ -245,7 +256,9 @@ block content
             li.review-info__item-3
               span время выдачи
               p.review-info__price 3#[sub дня]
-        +price-list()
+        +price-list(
+          "collapse-6"
+        )
     .section.licenses(id="litsenzii")
       .container
         section.section__header.section__header--center.licenses__header

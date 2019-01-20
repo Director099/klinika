@@ -2066,7 +2066,7 @@ img {
 
 .field-text__input--message {
     background: white url("../img/icon-message.png") no-repeat 15px 11px/12px;
-    min-height: 125px;
+    min-height: 84px;
     resize: none;
     border-radius: 25px;
 }
@@ -2101,7 +2101,6 @@ img {
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    max-width: 560px;
 }
 
 .section__label-ident {
@@ -2122,6 +2121,7 @@ img {
 
 .page-header__logo {
     max-width: 102px;
+    z-index: 9;
 }
 
 .page-footer {
@@ -2174,18 +2174,31 @@ img {
     background-image: linear-gradient(-241deg, #4fc3e9 0%, #36a3c6 100%);
 }
 
+.navigation {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow-y: auto;
+}
+
 .navigation__list {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: none;
-    margin-right: 60px;
+    padding-top: 114px;
+    text-align: center;
 }
 
 .navigation__link {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 36px;
     color: #333333;
     padding: 5px 15px;
 }
@@ -2197,6 +2210,7 @@ img {
     box-shadow: 0 9px 18px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     background: white;
+    z-index: 9;
 }
 
 .callback__phone {
@@ -2294,6 +2308,7 @@ input:checked + .form-checkbox__check::after {
 }
 
 .main-block {
+    position: relative;
     max-width: 550px;
     text-align: center;
 }
@@ -2313,6 +2328,10 @@ input:checked + .form-checkbox__check::after {
     margin-bottom: 18px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.main-block__img {
+    display: none;
 }
 
 .form--center-mb {
@@ -2369,13 +2388,14 @@ input:checked + .form-checkbox__check::after {
 }
 
 .review-info {
-    max-width: 262px;
+    max-width: 242px;
     margin-bottom: 45px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .review-info--head {
+    max-width: 262px;
     margin-bottom: 0px;
 }
 
@@ -2494,6 +2514,7 @@ input:checked + .form-checkbox__check::after {
 }
 
 .fullpage {
+    overflow: hidden;
     padding-bottom: 32px;
     background: url("../img/bg-header.png") no-repeat center/cover;
 }
@@ -2543,7 +2564,7 @@ input:checked + .form-checkbox__check::after {
 }
 
 .advantages__text {
-    max-width: 255px;
+    max-width: 257px;
     font-size: 12px;
     font-weight: 400;
     line-height: 17.11px;
@@ -2623,9 +2644,6 @@ input:checked + .form-checkbox__check::after {
 .about {
     padding-top: 30px;
     padding-bottom: 5px;
-    background-image: url("../img/about-clinics.png");
-    background-repeat: no-repeat;
-    background-position: 690px -6px;
 }
 
 .services {
@@ -2681,6 +2699,7 @@ input:checked + .form-checkbox__check::after {
 .review__img {
     display: block;
     margin-left: auto;
+    margin-right: auto;
     margin-top: 0px;
     margin-bottom: 37px;
 }
@@ -2964,7 +2983,7 @@ input:checked + .form-checkbox__check::after {
     font-weight: 400;
     line-height: 14px;
     color: #666666;
-    margin: 8px 0 0;
+    margin: 8px auto 0;
 }
 
 .contact__ident {
@@ -2993,9 +3012,12 @@ input:checked + .form-checkbox__check::after {
     background-image: linear-gradient(73deg, #d2e0eb 0%, #f4f7f9 35%, #d2e0eb 100%);
 }
 
-.btn__width {
+.modal-content--hidden {
+    display: none;
+}
+
+.modal__btn {
     width: 100%;
-    margin-bottom: 18px;
 }
 
 .modal__close {
@@ -3025,7 +3047,6 @@ input:checked + .form-checkbox__check::after {
 
 .toggle span {
     position: absolute;
-    right: 0;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -3054,6 +3075,26 @@ input:checked + .form-checkbox__check::after {
     bottom: 0%;
 }
 
+.toggle:focus {
+    outline: none;
+}
+
+.toggle--active span {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.toggle--active::after {
+    width: 0;
+}
+
+.toggle--active::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 @media (min-width: 576px) {
     .modal-dialog {
         max-width: 500px;
@@ -3079,12 +3120,12 @@ input:checked + .form-checkbox__check::after {
 
 @media (min-width: 768px) {
     body {
-        font-size: 16px;
-        line-height: 23px;
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .container {
-        max-width: 720px;
+        max-width: 764px;
     }
 
     .table td, .table th {
@@ -3120,9 +3161,9 @@ input:checked + .form-checkbox__check::after {
     }
 
     .field-text__input {
-        font-size: 14px;
-        line-height: 30px;
-        padding: 9px 10px 9px 50px;
+        font-size: 11px;
+        line-height: 23px;
+        padding: 9px 10px 7px 44px;
     }
 
     .field-text__input--tel {
@@ -3138,7 +3179,7 @@ input:checked + .form-checkbox__check::after {
     .field-text__input--message {
         min-height: 125px;
         background-size: auto;
-        background-position: 20px 16px;
+        background-position: 20px 12px;
     }
 
     .section {
@@ -3147,20 +3188,23 @@ input:checked + .form-checkbox__check::after {
     }
 
     .section__header {
-        margin-bottom: 98px;
+        margin-bottom: 53px;
     }
 
     .section__row {
-        flex-direction: row;
+        flex-direction: row-reverse;
+        max-width: 545px;
+        margin: 0 auto;
     }
 
     .page-header {
-        padding-top: 30px;
-        margin-bottom: 87px;
+        padding-top: 25px;
+        margin-bottom: 65px;
+        align-items: center;
     }
 
     .page-header__logo {
-        max-width: inherit;
+        max-width: 136px;
     }
 
     .page-footer {
@@ -3173,35 +3217,42 @@ input:checked + .form-checkbox__check::after {
     }
 
     .page-footer__develop {
-        max-width: auto;
+        max-width: inherit;
     }
 
     .btn {
-        font-size: 14px;
-        line-height: 30px;
-        width: auto;
-        padding: 9px 30px;
+        font-size: 11px;
+        line-height: 23px;
+        width: 100%;
+        padding: 9px 27px;
+    }
+
+    .navigation__list {
+        padding-top: 164px;
+    }
+
+    .navigation__link {
+        font-size: 24px;
+        line-height: 60px;
     }
 
     .callback {
-        padding: 5px 25px 5px 47px;
+        padding: 1px 22px 3px 46px;
         background: white url("../img/phone.png") no-repeat 8px 50%;
     }
 
     .callback__phone {
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 16px;
+        font-size: 13px;
     }
 
     .callback__text {
         display: block;
-        margin: -2px 0 0;
-        font-size: 10px;
+        font-size: 9px;
         font-weight: 400;
         line-height: 16px;
         text-decoration: underline;
         color: #909090;
+        margin: -2px 0 0;
     }
 
     .title {
@@ -3211,7 +3262,7 @@ input:checked + .form-checkbox__check::after {
     }
 
     .tagline {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .form-checkbox--ml {
@@ -3228,21 +3279,31 @@ input:checked + .form-checkbox__check::after {
 
     .main-block__title {
         margin-bottom: 20px;
+        max-width: 460px;
     }
 
     .main-block__text {
         line-height: 25px;
-        margin-bottom: 38px;
+        margin-bottom: 31px;
+        max-width: 460px;
     }
 
     .main-block__form {
-        max-width: inherit;
-        margin: 0 0 64px;
+        max-width: 430px;
+        margin: 0 0 58px;
+    }
+
+    .main-block__img {
+        display: block;
+        position: absolute;
+        right: -330px;
+        top: -25px;
+        max-width: 400px;
     }
 
     .form--center-mb {
-        max-width: 100%;
-        margin: 0;
+        max-width: 542px;
+        text-align: left;
     }
 
     .form__row--mb-phone {
@@ -3258,20 +3319,28 @@ input:checked + .form-checkbox__check::after {
 
     .form__col-7 {
         max-width: 290px;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .form__col-5 {
         max-width: 262px;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .review-info {
+        max-width: 356px;
+        margin-bottom: 55px;
     }
 
     .review-info--head {
         margin-left: initial;
         max-width: 794px;
-    }
-
-    .review-info {
-        max-width: 456px;
-        margin-bottom: 55px;
     }
 
     .review-info__item-3 {
@@ -3291,7 +3360,7 @@ input:checked + .form-checkbox__check::after {
     .review-info span {
         font-size: 16px;
         line-height: 16px;
-        margin-bottom: 3px;
+        margin-bottom: 11px;
     }
 
     .review-info__price sub {
@@ -3304,23 +3373,23 @@ input:checked + .form-checkbox__check::after {
     }
 
     .review-info__text {
-        margin-top: 11px;
-        font-size: 8px;
+        margin-top: 16px;
+        font-size: 12px;
         font-weight: 300;
-        line-height: 10.5px;
+        line-height: 15px;
         max-width: 138px;
     }
 
     .fullpage {
-        padding-bottom: 73px;
+        padding-bottom: 5px;
     }
 
     .advantages__item {
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 50%;
+        max-width: 50%;
         padding-left: 15px;
         padding-right: 15px;
-        margin-bottom: 0;
+        margin-bottom: 53px;
     }
 
     .advantages__title::after {
@@ -3328,7 +3397,6 @@ input:checked + .form-checkbox__check::after {
     }
 
     .advantages__title {
-        max-width: 200px;
         font-size: 18px;
         line-height: 25px;
         padding-top: 25px;
@@ -3340,12 +3408,16 @@ input:checked + .form-checkbox__check::after {
         line-height: 20px;
     }
 
+    .excellence {
+        max-width: inherit;
+    }
+
     .excellence__item {
         flex: 0 0 50%;
         max-width: 50%;
         padding-left: 15px;
         padding-right: 15px;
-        margin-bottom: 53px;
+        margin-bottom: 63px;
     }
 
     .excellence__wrap {
@@ -3363,12 +3435,20 @@ input:checked + .form-checkbox__check::after {
     }
 
     .about {
-        padding-top: 88px;
-        padding-bottom: 61px;
+        padding-top: 42px;
+        padding-bottom: 0;
+    }
+
+    .about__header {
+        text-align: center;
+    }
+
+    .about__header {
+        text-align: left;
     }
 
     .services {
-        padding-top: 82px;
+        padding-top: 50px;
         padding-bottom: 89px;
     }
 
@@ -3377,18 +3457,15 @@ input:checked + .form-checkbox__check::after {
     }
 
     .review {
-        margin-bottom: 10px;
+        margin-bottom: 45px;
+    }
+
+    .review__row {
+        text-align: center;
     }
 
     .review__row--reverse {
         flex-direction: row-reverse;
-    }
-
-    .review__col {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding-left: 15px;
-        padding-right: 15px;
     }
 
     .review__title {
@@ -3403,8 +3480,10 @@ input:checked + .form-checkbox__check::after {
         margin-bottom: 52px;
     }
 
-    .review__img {
-        margin-top: -60px;
+    .review__content {
+        max-width: 490px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .price-list__title {
@@ -3413,7 +3492,7 @@ input:checked + .form-checkbox__check::after {
     }
 
     .price-list__collapse {
-        padding: 33px 23px 23px;
+        padding: 33px 70px 23px;
         width: calc(100% - 45px);
     }
 
@@ -3428,10 +3507,15 @@ input:checked + .form-checkbox__check::after {
     }
 
     .commission {
-        padding-top: 110px;
+        padding-top: 370px;
         padding-bottom: 91px;
-        background-position: -284px 0;
-        background-size: auto;
+        background-position: 85% 0;
+        background-size: 1360px;
+    }
+
+    .commission__content {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .laboratory {
@@ -3439,22 +3523,22 @@ input:checked + .form-checkbox__check::after {
     }
 
     .research {
-        padding-top: 125px;
+        padding-top: 358px;
         padding-bottom: 94px;
-        background-position: -288px 0;
-        background-size: auto;
+        background-position: 88% 0;
+        background-size: 1460px;
     }
 
     .reception {
-        padding-top: 227px;
-        padding-bottom: 95px;
-        background-position: -288px 0;
-        background-size: auto;
+        padding-top: 327px;
+        padding-bottom: 60px;
+        background-position: 85% -5px;
+        background-size: 1240px;
     }
 
     .licenses {
-        padding-top: 71px;
-        padding-bottom: 99px;
+        padding-top: 56px;
+        padding-bottom: 80px;
     }
 
     .licenses__header {
@@ -3463,7 +3547,7 @@ input:checked + .form-checkbox__check::after {
 
     .contact {
         padding-top: 73px;
-        padding-bottom: 58px;
+        padding-bottom: 0;
     }
 
     .contact__title {
@@ -3471,52 +3555,46 @@ input:checked + .form-checkbox__check::after {
         line-height: 40px;
         text-align: left;
         margin-bottom: 35px;
+        text-align: center;
     }
 
     .contact__list {
-        margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 90px;
     }
 
     .contact__item {
-        padding-left: 28px;
-        margin-bottom: 22px;
-        text-align: left;
+        width: 50%;
+        margin-bottom: 65px;
     }
 
     .contact__name-address {
         font-size: 12px;
-        margin-bottom: 6px;
+        margin-bottom: 3px;
     }
 
     .contact__address {
-        padding-left: 28px;
-        margin-left: -28px;
         font-size: 16px;
     }
 
     .contact__address::after {
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 17px;
+        width: 19px;
         height: 15px;
-        padding-left: 28px;
-        margin-left: -28px;
-        font-size: 16px;
-    }
-
-    .contact__address--point::after {
-        height: 20px;
+        top: -46px;
     }
 
     .contact__desk {
         font-size: 14px;
         line-height: 20px;
-        margin: 14px 0 0;
     }
 
     .contact__ident {
-        margin-bottom: 0;
+        margin-bottom: 74px;
+    }
+
+    .modal__btn {
+        margin-bottom: 18px;
     }
 
     .toggle {
@@ -3535,16 +3613,96 @@ input:checked + .form-checkbox__check::after {
 }
 
 @media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
     .container {
         max-width: 1200px;
+    }
+
+    .field-text__input {
+        padding: 9px 10px 9px 50px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .field-text__input--message {
+        background-size: auto;
+        background-position: 20px 16px;
+    }
+
+    .section__header {
+        margin-bottom: 98px;
+    }
+
+    .section__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        max-width: inherit;
+    }
+
+    .section__col {
+        max-width: 560px;
+    }
+
+    .page-header {
+        padding-top: 27px;
+        margin-bottom: 87px;
+    }
+
+    .page-header__logo {
+        max-width: inherit;
     }
 
     .page-footer__logo {
         display: block;
     }
 
+    .btn {
+        font-size: 14px;
+        line-height: 30px;
+        width: auto;
+        padding: 9px 30px;
+    }
+
+    .navigation {
+        display: block;
+        position: static;
+        background: transparent;
+        overflow: inherit;
+        width: auto;
+        height: auto;
+    }
+
     .navigation__list {
         display: flex;
+        text-align: left;
+        margin-right: 60px;
+        padding-top: 0;
+    }
+
+    .navigation__link {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        padding: 5px 15px;
+    }
+
+    .callback {
+        padding: 5px 25px 5px 47px;
+        background: white url("../img/phone.png") no-repeat 8px 50%;
+    }
+
+    .callback__phone {
+        font-size: 15px;
+    }
+
+    .callback__text {
+        font-size: 10px;
     }
 
     .title {
@@ -3552,12 +3710,219 @@ input:checked + .form-checkbox__check::after {
         line-height: 48px;
     }
 
-    .licenses__item .licenses__item:hover .licenses__hidden {
+    .tagline {
+        font-size: 18px;
+    }
+
+    .main-block__title {
+        max-width: inherit;
+    }
+
+    .main-block__text {
+        max-width: inherit;
+        line-height: 25px;
+        margin-bottom: 38px;
+    }
+
+    .main-block__form {
+        margin: 0 0 64px;
+        max-width: 550px;
+    }
+
+    .main-block__img {
+        right: -623px;
+        top: -19px;
+        max-width: 100%;
+    }
+
+    .form--center-mb {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .review-info {
+        max-width: 456px;
+        margin-bottom: 55px;
+        margin-right: 0;
+    }
+
+    .review-info--head {
+        margin-left: initial;
+        max-width: 794px;
+    }
+
+    .review-info span {
+        margin-bottom: 10px;
+    }
+
+    .fullpage {
+        padding-bottom: 17px;
+    }
+
+    .advantages__item {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 0;
+    }
+
+    .advantages__title {
+        max-width: 200px;
+    }
+
+    .advantages__text {
+        max-width: 214px;
+    }
+
+    .excellence {
+        max-width: 600px;
+        margin-bottom: 9px;
+    }
+
+    .excellence__item {
+        margin-bottom: 53px;
+    }
+
+    .about {
+        background-image: url("../img/about-clinics.png");
+        background-repeat: no-repeat;
+        background-position: 690px -6px;
+        padding-top: 88px;
+        padding-bottom: 41px;
+    }
+
+    .services {
+        padding-top: 82px;
+        padding-bottom: 89px;
+    }
+
+    .review {
+        margin-bottom: 10px;
+    }
+
+    .review__row {
+        text-align: left;
+    }
+
+    .review__col {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .review__title {
+        max-width: 502px;
+    }
+
+    .review__text {
+        max-width: 565px;
+    }
+
+    .review__img {
+        margin-top: -60px;
+    }
+
+    .review__content {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .price-list__collapse {
+        padding: 33px 23px 23px;
+    }
+
+    .commission {
+        padding-top: 110px;
+        padding-bottom: 91px;
+        background-position: -284px 0;
+        background-size: auto;
+    }
+
+    .research {
+        padding-top: 125px;
+        padding-bottom: 94px;
+        background-position: -288px 0;
+        background-size: auto;
+    }
+
+    .reception {
+        padding-top: 227px;
+        padding-bottom: 95px;
+        background-position: -288px 0;
+        background-size: auto;
+    }
+
+    .reception__text {
+        max-width: 505px;
+    }
+
+    .licenses {
+        padding-top: 71px;
+        padding-bottom: 99px;
+    }
+
+    .licenses__item:hover .licenses__hidden {
         opacity: 1;
     }
 
     .licenses__slider {
         padding: 0 0px;
+    }
+
+    .contact {
+        padding-top: 73px;
+        padding-bottom: 58px;
+    }
+
+    .contact__title {
+        text-align: left;
+    }
+
+    .contact__list {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .contact__item {
+        width: 100%;
+        padding-left: 28px;
+        margin-bottom: 14px;
+        text-align: left;
+    }
+
+    .contact__name-address {
+        margin-bottom: 0px;
+    }
+
+    .contact__address {
+        padding-left: 28px;
+        margin-left: -28px;
+    }
+
+    .contact__address::after {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 17px;
+        height: 15px;
+    }
+
+    .contact__address--point::after {
+        height: 20px;
+    }
+
+    .contact__desk {
+        margin: 10px 0 0;
+    }
+
+    .contact__ident {
+        margin-bottom: 0;
+    }
+
+    .modal__btn {
+        width: 100%;
     }
 
     .toggle {

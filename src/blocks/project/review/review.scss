@@ -2,6 +2,10 @@
   margin-bottom: 35px;
 
   @media(min-width: $screen-md) {
+    margin-bottom: 45px;
+  }
+
+  @media(min-width: $screen-xl) {
     margin-bottom: 10px;
   }
 }
@@ -9,13 +13,20 @@
 .review__row {
   @include make-row();
 
+  @media(min-width: $screen-md) {
+    text-align: center;
+  }
+
+  @media(min-width: $screen-xl) {
+    text-align: left;
+  }
+
 
   &--reverse {
     @media(min-width: $screen-md) {
       flex-direction: row-reverse;
     }
   }
-
 
   &--ai-c {
     align-items: center;
@@ -25,7 +36,7 @@
 .review__col {
   @include make-col-ready();
 
-  @media(min-width: $screen-md) {
+  @media(min-width: $screen-xl) {
     @include make-col(6);
   }
 }
@@ -42,6 +53,10 @@
     line-height: 37px;
     margin-bottom: 20px;
   }
+
+  @media(min-width: $screen-xl) {
+    max-width: 502px;
+  }
 }
 
 .review__text {
@@ -56,15 +71,34 @@
     line-height: 23px;
     margin-bottom: 52px;
   }
+
+  @media(min-width: $screen-xl) {
+    max-width: 565px;
+  }
 }
 
 .review__img {
   display: block;
   margin-left: auto;
+  margin-right: auto;
   margin-top: 0px;
   margin-bottom: 37px;
 
-  @media(min-width: $screen-md) {
+  @media(min-width: $screen-xl) {
     margin-top: -60px;
+  }
+}
+
+.review__content {
+  @media(min-width: $screen-md) {
+    max-width: 490px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media(min-width: $screen-xl) {
+    max-width: 100%;
+    margin: 0;
+    // max-width: inherit;
   }
 }

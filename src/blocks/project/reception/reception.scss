@@ -8,6 +8,13 @@
   background-size: 790px;
 
   @media (min-width: $screen-md) {
+    padding-top: 327px;
+    padding-bottom: 60px;
+    background-position: 85% -5px;
+    background-size: 1240px;
+  }
+
+  @media (min-width: $screen-xl) {
     padding-top: 227px;
     padding-bottom: 95px;
     background-position: -288px 0;
@@ -16,5 +23,11 @@
 
   @media(min-width: 1400px) {
     background-position: 100% 0;
+  }
+}
+
+.reception__text {
+  @media (min-width: $screen-xl) {
+    max-width: 505px;
   }
 }

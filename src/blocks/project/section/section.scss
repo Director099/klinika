@@ -12,6 +12,10 @@
   margin-bottom: 45px;
 
   @media(min-width: $screen-md) {
+    margin-bottom: 53px;
+  }
+
+  @media(min-width: $screen-xl) {
     margin-bottom: 98px;
   }
 
@@ -24,7 +28,14 @@
   @include make-row();
 
   @media(min-width: $screen-md) {
-    flex-direction: row;
+    flex-direction: row-reverse;
+    max-width: 545px;
+    margin: 0 auto;
+  }
+
+  @media(min-width: $screen-xl) {
+    @include make-row();
+    max-width: inherit;
   }
 
   &--jc-sb {
@@ -34,7 +45,10 @@
 
 .section__col {
   @include make-col-ready();
-  max-width: 560px;
+
+  @media(min-width: $screen-xl) {
+    max-width: 560px;
+  }
 }
 
 .section__label-ident {

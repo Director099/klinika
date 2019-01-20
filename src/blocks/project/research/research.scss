@@ -8,6 +8,13 @@
   background-color: #e9f0f5;
 
   @media (min-width: $screen-md) {
+    padding-top: 358px;
+    padding-bottom: 94px;
+    background-position: 88% 0;
+    background-size: 1460px;
+  }
+
+  @media (min-width: $screen-xl) {
     padding-top: 125px;
     padding-bottom: 94px;
     background-position: -288px 0;

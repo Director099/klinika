@@ -309,8 +309,31 @@ $(".licenses__slider").owlCarousel({
       768:{
           items:2
       },
-      1000:{
+      1200:{
           items:4
       }
   }
+})
+
+
+$(".toggle").on("click", function() {
+  $(".toggle").toggleClass("toggle--active");
+
+  if(!$(".toggle").hasClass("toggle--active")) {
+    $(".navigation").fadeOut();
+  } else {
+    $(".navigation").fadeIn();
+  }
+})
+
+
+$(".modal__btn").on("click", function() {
+  var parent = $(this).parents(".modal-dialog");
+  parent.find(".modal-content").eq(0).addClass("modal-content--hidden");
+  parent.find(".modal-content").eq(1).removeClass("modal-content--hidden");
+})
+
+$(document).on('hidden.bs.modal', '.modal', function (e) {
+  $(".modal-content").eq(0).removeClass("modal-content--hidden");
+  $(".modal-content").eq(1).addClass("modal-content--hidden");
 })

@@ -3,6 +3,15 @@
   @include make-row();
   max-width: 600px;
   margin-bottom: 29px;
+
+  @media(min-width: $screen-md) {
+    max-width: inherit;
+  }
+
+  @media(min-width: $screen-xl) {
+    max-width: 600px;
+    margin-bottom: 9px;
+  }
 }
 
 .excellence__item {
@@ -11,6 +20,10 @@
 
   @media(min-width: $screen-md) {
     @include make-col(6);
+    margin-bottom: 63px;
+  }
+
+  @media(min-width: $screen-xl) {
     margin-bottom: 53px;
   }
 }
