@@ -7,107 +7,321 @@ block header
     .container
       +page-header()
       .main-block
-        h1.main-block__title Современный #[span медицинский центр] на м. Курская
+        h1.title.main-block__title Современный #[span медицинский центр] на&nbsp;м. Курская
         p.main-block__text Выдача медицинских справок, оформление медицинских книжек, проведение психиатрического освидетельствования. Амбулаторный прием врачей. УЗИ. Медицинские анализы.
-        form.form
+        img.main-block__img(src="img/img-book.png", alt="Ичная медицинская книжка")
+        form.form.main-block__form
           .form__row
-            label.field-text
-              input.field-text__input(type="tel")
-            button.btn.btn--main Записаться без очереди
-          label.form-checkbox
+            .form__col-7
+              label.field-text
+                input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __" required)
+            .form__col-5
+              button.btn.btn--main Записаться без очереди
+          label.form-checkbox.form-checkbox--ml
             input(type="checkbox" required checked)
             span.form-checkbox__check(aria-label="Согласие на обработку данных")
-            span.form-checkbox__text Я даю свое согласие на обработку персональных данных
-
+            span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#")  персональных данных]
+      .review-info.review-info--head
+        ul.review-info__list.review-info__list--jc-sb
+          li.review-info__item-3
+            span от
+            p.review-info__price 1000#[sub руб.]
+            p.review-info__text Медицинская справка за 15 минут
+          li.review-info__item-3
+            span от
+            p.review-info__price 2700#[sub руб.]
+            p.review-info__text Медицинская книжка за 3 дня
+          li.review-info__item-5
+            p.review-info__desk Безналичная\наличная формы оплаты. Для корпоративных клиентов индивидуальные условия
 block content
   main
-    .section.about
+    .section.about(id="about")
       .container
-        h2.title Клиника на Курской
-        p.tagline Специализированный медицинский центр
+        .section__header.about__header
+          h2.title Клиника #[span на Курской]
+          p.tagline Специализированный медицинский центр
         ul.excellence
           li.excellence__item
-            span.excellence__circle
-            p.excellence__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, eveniet.
+            .excellence__wrap
+              span.excellence__circle
+              p.excellence__text #[strong Современный медицинский центр,] входящий в группу компаний "Генезис".
           li.excellence__item
-            span.excellence__circle
-            p.excellence__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, dignissimos.
+            .excellence__wrap
+              span.excellence__circle
+              p.excellence__text #[strong Основная специализация центра -] амбулатурный прием пациентов, медицинская диагностика, проведение медицинских осмотров и&nbsp;выдача официальных заключений и&nbsp;справок.
           li.excellence__item
-            span.excellence__circle
-            p.excellence__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, corrupti.
+            .excellence__wrap
+              span.excellence__circle
+              p.excellence__text #[strong Врачи центра - специалисты высшей категории] с&nbsp;многолетним опытом работы, сертифицированые по&nbsp;специальности профпатология.
           li.excellence__item
-            span.excellence__circle
-            p.excellence__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, a.
+            .excellence__wrap
+              span.excellence__circle
+              p.excellence__text Центр оснащен всем необходимым #[strong современным оборудованием.]
         ol.advantages
           li.advantages__item
             strong.advantages__title На протяжении уже более 10 лет
             p.advantages__text Оказываем медицнские услуги
           li.advantages__item
-            strong.advantages__title На протяжении уже более 10 лет
-            p.advantages__text Оказываем медицнские услуги
+            strong.advantages__title Находимся в центре Москвы
+            p.advantages__text 5&nbsp;минут от&nbsp;метро Курская, 5&nbsp;минут от&nbsp;Курского вокзала
           li.advantages__item
-            strong.advantages__title На протяжении уже более 10 лет
-            p.advantages__text Оказываем медицнские услуги
+            strong.advantages__title Высокий уровень сервиса
+            p.advantages__text Центр оборудован по&nbsp;европейским стандартам качества.
           li.advantages__item
-            strong.advantages__title На протяжении уже более 10 лет
-            p.advantages__text Оказываем медицнские услуги
-    .section.services
+            strong.advantages__title 300 медицинских справок
+            p.advantages__text Выдаем каждый день, работаем 7&nbsp;дней в&nbsp;неделю
+    .section.services(id="uslugi")
       .container
-        section.section__center
-          h2.title Наши услуги
-          p.tagline Ознакомьтесь со списком услуг, которые мы предоставляем
+        section.section__header.section__header--center
+          h2.title Наши #[span услуги]
+          p.tagline.services__tagline Ознакомьтесь со&nbsp;списком услуг, которые мы&nbsp;предоставляем
         .review
-          .review__row
-            section.review__col
-              h3.review__title Выдача медицинских справок
-              p.review__text Медицинские справки требуются почти при любой жизненной ситуации. Каждый из нас устраивался на новую работу, поступал в учебное заведение, пропускал занятия, из за болезни не ходил на работу, сдавал анализы для бассейна.
-              form.form
-                .form__row
-                  label.field-text
-                    input.field-text__input(type="tel")
-                  button.btn.btn--main Записаться без очереди
-                label.form-checkbox
+          .review__row.review__row--reverse
+            .review__col
+              img.review__img(src="img/med-spravka.png", alt="медицинская справка")
+            .review__col
+              section.review__content
+                h3.review__title Выдача медицинских справок
+                p.review__text Медицинские справки требуются почти при любой жизненной ситуации. Каждый из&nbsp;нас устраивался на&nbsp;новую работу, поступал в&nbsp;учебное заведение, пропускал занятия, из&nbsp;за&nbsp;болезни не&nbsp;ходил на&nbsp;работу, сдавал анализы для бассейна.
+              form.form.form--center-mb
+                .form__row.form__row--mb-phone
+                  .form__col-7
+                    label.field-text.section__label-ident
+                      input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __" required)
+                  .form__col-5
+                    button.btn.btn--main Записаться без очереди
+                label.form-checkbox.form-checkbox--ml.form-checkbox--mini
                   input(type="checkbox" required checked)
                   span.form-checkbox__check(aria-label="Согласие на обработку данных")
-                  span.form-checkbox__text Я даю свое согласие на обработку персональных данных
+                  span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#")  персональных данных]
+        .review-info
+          ul.review-info__list.review-info__list--jc-sb
+            li.review-info__item-3
+              span стоимость от
+              p.review-info__price 1000#[sub руб.]
+            li.review-info__item-3
+              span время выдачи
+              p.review-info__price 15#[sub мин.]
+        +price-list(
+          "collapse-1"
+        )
+    .section.med-book(id="medknizhki")
+      .container
+        .review
+          .review__row.review__row--ai-c.review__row--reverse
             .review__col
-        .price-list
-          a(data-toggle="collapse" href="#collaps-1" role="button") Стоимость оформления медицинских справок
-          .collapse  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem sunt rerum soluta et unde aliquam modi ducimus laboriosam tenetur deserunt, ratione nobis animi saepe fuga similique rem, quam itaque aspernatur.
-    .section.licenses
+              img(src="img/imb-book.png", alt="Медицинская книжка")
+            .review__col
+              section.review__content
+                h3.review__title Оформление медицинских книжек
+                p.review__text Потребуется при устройстве на&nbsp;работу связанную с&nbsp;учебным процессом, продуктами питания, бытовым обслуживанием, медучреждениями, общественным транспортом и&nbsp;многих других сфер занятости
+              form.form.form--center-mb
+                .form__row.form__row--mb-phone
+                  .form__col-7
+                    label.field-text.section__label-ident
+                      input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __" required)
+                  .form__col-5
+                    button.btn.btn--main Записаться без очереди
+                label.form-checkbox.form-checkbox--ml.form-checkbox--mini
+                  input(type="checkbox" required checked )
+                  span.form-checkbox__check(aria-label="Согласие на обработку данных")
+                  span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#")  персональных данных]
+        .review-info
+          ul.review-info__list.review-info__list--jc-sb
+            li.review-info__item-3
+              span стоимость от
+              p.review-info__price 1000#[sub руб.]
+            li.review-info__item-3
+              span время выдачи
+              p.review-info__price 15#[sub мин.]
+        +price-list(
+          "collapse-2"
+        )
+    .section.commission(id="medkom")
       .container
-        section.section__center
-          h2.title Имеем #[span допуски и лицензии] на все необходимые медицинские работы
-        .licenses__slider
-          .licenses__item
-          .licenses__item
-          .licenses__item
-          .licenses__item
-    .section.contacts
+        .review
+          .review__row
+            .review__col
+              section.review__content.commission__content
+                h3.review__title Прохождение медицинской комиссии
+                p.review__text Водительская медкомиссия, психиатрическое освидетельствование, профосмотры
+              form.form.form--center-mb
+                .form__row.form__row--mb-phone
+                  .form__col-7
+                    label.field-text.section__label-ident
+                      input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __" required)
+                  .form__col-5
+                    button.btn.btn--main Записаться без очереди
+                label.form-checkbox.form-checkbox--ml.form-checkbox--mini
+                  input(type="checkbox" required checked)
+                  span.form-checkbox__check(aria-label="Согласие на обработку данных")
+                  span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#")  персональных данных]
+        .review-info
+          ul.review-info__list.review-info__list--jc-sb
+            li.review-info__item-3
+              span стоимость от
+              p.review-info__price 1000#[sub руб.]
+            li.review-info__item-3
+              span время выдачи
+              p.review-info__price 15#[sub мин.]
+        +price-list(
+          "collapse-3"
+        )
+    .section.research(id="uzi")
       .container
-        .section__row
-          .section__col
-            h2.contact__title Lorem ipsum dolor sit.
-
-          .section__col
-            h2.contact__title Lorem ipsum dolor sit.
+        .review
+          .review__row
+            .review__col
+              section.review__content
+                h3.review__title Проведение ультрозвуковых исследований (УЗИ)
+                p.review__text Процедура имеет широчайший спектр показаний и&nbsp;активно применяется для диагностики заболеваний самых различных систем организма. Также проводится в&nbsp;профилактических целях и&nbsp;с&nbsp;целью контроля за&nbsp;результатами лечения, при беременности.
+              form.form.form--center-mb
+                .form__row.form__row--mb-phone
+                  .form__col-7
+                    label.field-text.section__label-ident
+                      input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __" required)
+                  .form__col-5
+                    button.btn.btn--main Записаться без очереди
+                label.form-checkbox.form-checkbox--ml.form-checkbox--mini
+                  input(type="checkbox" required checked)
+                  span.form-checkbox__check(aria-label="Согласие на обработку данных")
+                  span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#")  персональных данных]
+        .review-info
+          ul.review-info__list.review-info__list--jc-sb
+            li.review-info__item-3
+              span стоимость от
+              p.review-info__price 2700#[sub руб.]
+            li.review-info__item-3
+              span время выдачи
+              p.review-info__price 3#[sub дня]
+        +price-list(
+          "collapse-4"
+        )
+    .section.laboratory(id="lab")
+      .container
+        .review
+          .review__row.review__row--reverse
+            .review__col
+              img.review__img(src="img/img-lab.png", alt="Лабораторные анализы")
+            .review__col
+              section.review__content
+                h3.review__title Все виды лабораторных анализов
+                p.review__text Высокоточное оборудование последнего поколения, используемое лабораториями &laquo;Клиника на&nbsp;Курской&raquo;, позволяет проводить исследования в&nbsp;автоматическом режиме и&nbsp;в&nbsp;кратчайшие сроки. Все исследования выполняются на&nbsp;автоматических анализаторах закрытого типа с&nbsp;использованием фирменных реагентов и&nbsp;калибраторов.
+              form.form.form--center-mb
+                .form__row.form__row--mb-phone
+                  .form__col-7
+                    label.field-text.section__label-ident
+                      input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __" required)
+                  .form__col-5
+                    button.btn.btn--main Записаться без очереди
+                label.form-checkbox.form-checkbox--ml.form-checkbox--mini
+                  input(type="checkbox" required checked)
+                  span.form-checkbox__check(aria-label="Согласие на обработку данных")
+                  span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#")  персональных данных]
+        .review-info
+          ul.review-info__list.review-info__list--jc-sb
+            li.review-info__item-3
+              span стоимость от
+              p.review-info__price 1000#[sub руб.]
+            li.review-info__item-3
+              span время выдачи
+              p.review-info__price 15#[sub мин.]
+        +price-list(
+          "collapse-5"
+        )
+    .section.reception(id="priem")
+      .container
+        .review
+          .review__row
+            .review__col
+              section.review__content
+                h3.review__title Амбулаторный прием врачей
+                p.review__text.reception__text Амбулаторный прием врачей  по следующим специальностям: Терапевт, ЛОР, Хирург, Гинеколог, Дерматолог-венеролог.
+              form.form.form--center-mb
+                .form__row.form__row--mb-phone
+                  .form__col-7
+                    label.field-text.section__label-ident
+                      input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __" required)
+                  .form__col-5
+                    button.btn.btn--main Записаться без очереди
+                label.form-checkbox.form-checkbox--ml.form-checkbox--mini
+                  input(type="checkbox" required checked)
+                  span.form-checkbox__check(aria-label="Согласие на обработку данных")
+                  span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#")  персональных данных]
+        .review-info
+          ul.review-info__list.review-info__list--jc-sb
+            li.review-info__item-3
+              span стоимость от
+              p.review-info__price 2700#[sub руб.]
+            li.review-info__item-3
+              span время выдачи
+              p.review-info__price 3#[sub дня]
+        +price-list(
+          "collapse-6"
+        )
+    .section.licenses(id="litsenzii")
+      .container
+        section.section__header.section__header--center.licenses__header
+          h2.title.licenses__title Имеем #[span допуски и лицензии] #[br] на все необходимые медицинские работы
+        .licenses__slider.owl-carousel.owl-theme
+          a.licenses__item(href="img/sert.jpg" data-fancybox)
+            img(src="img/sert.jpg", alt="Сертификат")
+            .licenses__hidden
+              .licenses__increase
+              p.licenses__text Лицензия
+          a.licenses__item(href="img/sert.jpg" data-fancybox)
+            img(src="img/sert.jpg", alt="Сертификат")
+            .licenses__hidden
+              .licenses__increase
+              p.licenses__text Лицензия
+          a.licenses__item(href="img/sert.jpg" data-fancybox)
+            img(src="img/sert.jpg", alt="Сертификат")
+            .licenses__hidden
+              .licenses__increase
+              p.licenses__text Лицензия
+          a.licenses__item(href="img/sert.jpg" data-fancybox)
+            img(src="img/sert.jpg", alt="Сертификат")
+            .licenses__hidden
+              .licenses__increase
+              p.licenses__text Лицензия
+    .section.contact(id="kontakt")
+      .container
+        .section__row.section__row--jc-sb
+          .section__col.contact__ident
+            h2.contact__title Остались вопросы? Получите бесплатную консультацию
             form.form
               .form__row
                 .form__col
                   label.field-text
-                    input.field-text__input(type="text" placeholder="Ваше имя")
+                    input.field-text__input.field-text__input--name(type="text" placeholder="Как вас зовут?" required)
                 .form__col
                   label.field-text
-                    input.field-text__input(type="tel")
+                    input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __" required)
               label.field-text
-                textarea.field-text__input.field-text__input--message(placeholder="Опишите условия заказа")
-              .form__row
+                textarea.field-text__input.field-text__input--message(placeholder="Опишите ваш вопрос" required)
+              .form__row.form__row--ai-c
                 .form__col
                   button.btn.btn--main Записаться без очереди
                 .form__col
-                  label.form-checkbox
+                  label.form-checkbox.form-checkbox--mb-none
                     input(type="checkbox" required checked)
                     span.form-checkbox__check(aria-label="Согласие на обработку данных")
-                    span.form-checkbox__text Я даю свое согласие на обработку персональных данных
+                    span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#") персональных данных]
+          .section__col
+            h2.contact__title Контактная #[br] информация
+            ul.contact__list
+              li.contact__item
+                span.contact__name-address Наш адрес
+                strong.contact__address.contact__address--point Москва, ул. Земляной вал, д.7.
+                p.contact__desk 1-я линия садового кольца, 5 минут от метро Курская, 5 минут от Курского вокзала
+              li.contact__item
+                span.contact__name-address График работы
+                strong.contact__address.contact__address--calendar без выходных
+              li.contact__item
+                span.contact__name-address E-mail
+                a.contact__address.contact__address--mail(href="mailto:info@profmos.ru") info@profmos.ru
+              li.contact__item
+                span.contact__name-address Телефон
+                a.contact__address.contact__address--phone(href="tel:+7(978)0000000") +7 (978) 000 - 00 - 00
 block footer
   +page-footer()

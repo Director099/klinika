@@ -1,0 +1,31 @@
+.btn {
+  box-shadow: 0 10px 21px rgba(54, 163, 198, 0.55);
+  border-radius: 50px;
+  background-color: $white;
+  border: none;
+  padding: 7px 30px;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 20.02px;
+  width: 100%;
+
+
+  @media (min-width: $screen-md) {
+    font-size: 11px;
+    line-height: 23px;
+    width: 100%;
+    padding: 9px 27px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 14px;
+    line-height: 30px;
+    width: auto;
+    padding: 9px 30px;
+  }
+
+  &--main {
+    color: $white;
+    background-image: linear-gradient(-241deg, #4fc3e9 0%, #36a3c6 100%);
+  }
+}

@@ -1,0 +1,35 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  margin-bottom: 35px;
+
+  @media(min-width: $screen-md) {
+    padding-top: 25px;
+    margin-bottom: 65px;
+    align-items: center;
+  }
+
+  @media(min-width: $screen-xl) {
+    padding-top: 27px;
+    margin-bottom: 87px;
+  }
+}
+
+.page-header__right {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__logo {
+  max-width: 102px;
+  z-index: 9;
+
+  @media(min-width: $screen-md) {
+    max-width: 136px;
+  }
+
+  @media(min-width: $screen-xl) {
+    max-width: inherit;
+  }
+}

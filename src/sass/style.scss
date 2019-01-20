@@ -2,21 +2,62 @@
 @import "variables";
 
 @import "../../node_modules/normalize.css/normalize.css";
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/reboot";
+
 // @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
-// @import "../../node_modules/owl.carousel/dist/assets/owl.carousel.css";
-// @import "../../node_modules/owl.carousel/dist/assets/owl.theme.default.css";
-// @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+@import "../../node_modules/owl.carousel/dist/assets/owl.carousel.css";
+@import "../../node_modules/owl.carousel/dist/assets/owl.theme.default.css";
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
 // My style
 
- @import "grid-mixins";
+@import "grid-mixins";
 
 
 @import "functions";
 
 
-// @import "fonts";
+@import "fonts";
 @import "global";
 
+@import "../blocks/project/container/container";
+@import "../blocks/project/table/table";
+@import "../blocks/project/logo/logo";
+@import "../blocks/project/map/map";
+@import "../blocks/project/field-text/field-text";
+@import "../blocks/project/section/section";
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
+@import "../blocks/project/btn/btn";
+@import "../blocks/project/navigation/navigation";
+@import "../blocks/project/callback/callback";
+@import "../blocks/project/title/title";
+@import "../blocks/project/tagline/tagline";
+
+@import "../blocks/project/form-checkbox/form-checkbox";
+@import "../blocks/project/main-block/main-block";
+@import "../blocks/project/form/form";
+@import "../blocks/project/review-info/review-info";
+@import "../blocks/project/fullpage/fullpage";
+@import "../blocks/project/advantages/advantages";
+@import "../blocks/project/excellence/excellence";
+
+@import "../blocks/project/about/about";
+@import "../blocks/project/services/services";
+@import "../blocks/project/review/review";
+@import "../blocks/project/price-list/price-list";
+@import "../blocks/project/med-book/med-book";
+@import "../blocks/project/commission/commission";
+@import "../blocks/project/laboratory/laboratory";
+@import "../blocks/project/research/research";
+@import "../blocks/project/reception/reception";
+@import "../blocks/project/licenses/licenses";
+@import "../blocks/project/contact/contact";
+@import "../blocks/project/modal/modal";
+@import "../blocks/project/toggle/toggle";

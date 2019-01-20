@@ -1,0 +1,75 @@
+.field-text {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+
+  @media(min-width: $screen-md) {
+    margin-bottom: 18px;
+  }
+}
+
+.field-text__input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 9px;
+  margin: 0;
+  font-size: 9px;
+  padding: 6px 26px 6px 35px;
+  font-weight: 400;
+  line-height: 20.02px;
+  font-family: $font-1;
+  background-color: $white;
+  border: 1px solid #fbfbfb;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 50px;
+  appearance: textfield;
+
+  @media(min-width: $screen-md) {
+    font-size: 11px;
+    line-height: 23px;
+    padding: 9px 10px 7px 44px;
+  }
+
+  @media(min-width: $screen-xl) {
+    padding: 9px 10px 9px 50px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  &--tel {
+    background: $white url("../img/call-answer.png") no-repeat 13px 50% / 12px;
+
+    @media(min-width: $screen-md) {
+      background-position: 13px 50%;
+      background-size: auto;
+    }
+  }
+
+  &--name {
+    background: $white url("../img/icon-user.png") no-repeat 15px 50% / 12px;
+
+    @media(min-width: $screen-md) {
+      background-position: 19px 50%;
+      background-size: auto;
+    }
+  }
+
+  &--message {
+    background: $white url("../img/icon-message.png") no-repeat 15px 11px / 12px;
+    min-height: 84px;
+    resize: none;
+    border-radius: 25px;
+
+    @media(min-width: $screen-md) {
+      min-height: 125px;
+      background-size: auto;
+      background-position: 20px 12px;
+    }
+
+    @media(min-width: $screen-xl) {
+      background-size: auto;
+      background-position: 20px 16px;
+    }
+  }
+}

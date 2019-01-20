@@ -1,0 +1,24 @@
+.services {
+  padding-top: 38px;
+  padding-bottom: 30px;
+  background: #f4f7f9;
+
+  @media(min-width: $screen-md) {
+    padding-top: 50px;
+    padding-bottom: 89px;
+  }
+
+  @media(min-width: $screen-xl) {
+    padding-top: 82px;
+    padding-bottom: 89px;
+  }
+}
+
+.services__tagline {
+  max-width: 220px;
+  margin: 0 auto;
+
+  @media(min-width: $screen-md) {
+    max-width: 100%;
+  }
+}

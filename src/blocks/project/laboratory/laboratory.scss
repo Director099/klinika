@@ -1,0 +1,8 @@
+.laboratory {
+  background: #f4f7f9;
+  padding-bottom: 47px;
+
+  @media(min-width: $screen-md) {
+    padding-bottom: 85px;
+  }
+}

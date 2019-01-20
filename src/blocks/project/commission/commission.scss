@@ -1,0 +1,36 @@
+.commission {
+  padding-top: 262px;
+  padding-bottom: 44px;
+  background-image: url("../img/bg-commission.png");
+  background-repeat: no-repeat;
+  background-position: 74% 0;
+  background-size: 990px;
+  background-color: #f4f7f9;
+
+  @media(min-width: $screen-md) {
+    padding-top: 370px;
+    padding-bottom: 91px;
+    background-position: 85% 0;
+    background-size: 1360px;
+  }
+
+  @media(min-width: $screen-xl) {
+    padding-top: 110px;
+    padding-bottom: 91px;
+    background-position: -284px 0;
+    background-size: auto;
+  }
+
+  @media (min-width: 1400px) {
+    background-position: 100% 0;
+  }
+}
+
+.commission__content {
+  max-width: 400px;
+
+  @media(min-width: $screen-md) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

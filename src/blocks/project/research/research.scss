@@ -1,0 +1,27 @@
+.research {
+  padding-top: 258px;
+  padding-bottom: 44px;
+  background-image: url("../img/bg-research.png");
+  background-repeat: no-repeat;
+  background-position: 74% 0;
+  background-size: 990px;
+  background-color: #e9f0f5;
+
+  @media (min-width: $screen-md) {
+    padding-top: 358px;
+    padding-bottom: 94px;
+    background-position: 88% 0;
+    background-size: 1460px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 125px;
+    padding-bottom: 94px;
+    background-position: -288px 0;
+    background-size: auto;
+  }
+
+  @media (min-width: 1400px) {
+    background-position: 100% 0;
+  }
+}

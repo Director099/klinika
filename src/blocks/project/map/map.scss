@@ -1,0 +1,7 @@
+.map {
+  height: 270px;
+
+  @media(min-width: $screen-md) {
+    height: 503px;
+  }
+}

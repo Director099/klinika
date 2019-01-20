@@ -1,0 +1,88 @@
+.price-list {
+
+}
+
+.price-list__title {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+
+  padding: 10px 55px 7px 22px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+  color: $black;
+  background: $white;
+  border-radius: 50px;
+  z-index: 9;
+
+  &:hover {
+    color: $black;
+  }
+
+  @media(min-width: $screen-md) {
+    font-size: 16px;
+    padding: 16px 55px 16px 42px;
+  }
+}
+
+.price-list__collapse {
+  width: calc(100% - 35px);
+  margin: 0 auto;
+  padding: 15px 8px 15px;
+  background: #fbfbfb;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 0 0 25px 25px;
+  border: 1px solid #fbfbfb;
+
+  @media(min-width: $screen-md) {
+    padding: 33px 70px 23px;
+    width: calc(100% - 45px);
+  }
+
+  @media(min-width: $screen-xl) {
+    padding: 33px 23px 23px;
+  }
+}
+
+.price-list__table {
+  max-width: 970px;
+  margin: 0 auto 20px;
+
+  &:last-childt {
+    margin-bottom: 0;
+  }
+}
+
+.price-list__arrow {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: $white;
+  background-image: linear-gradient(-241deg, #4fc3e9 0%, #3da8ca 100%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%) rotate(-180deg);
+    width: 12px;
+    height: 7px;
+    background: url("../img/arrow.png") no-repeat center;
+    transition: $time;
+  }
+
+  @media(min-width: $screen-md) {
+    width: 33px;
+    height: 33px;
+    right: 14px;
+  }
+}
+
+.price-list__title.collapsed .price-list__arrow::after {
+  transform: translate(-50%, -40%);
+}
