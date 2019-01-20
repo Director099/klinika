@@ -1,9 +1,14 @@
 .about {
-  padding-top: 88px;
-  padding-bottom: 61px;
+  padding-top: 30px;
+  padding-bottom: 5px;
   background-image: url("../img/about-clinics.png");
   background-repeat: no-repeat;
   background-position: 690px -6px;
+
+  @media(min-width: $screen-md) {
+    padding-top: 88px;
+    padding-bottom: 61px;
+  }
 
   @media(min-width: 1800px) {
     background-position: 100% -6px;

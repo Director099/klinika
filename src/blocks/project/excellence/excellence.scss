@@ -7,19 +7,27 @@
 
 .excellence__item {
   @include make-col-ready();
-  @include make-col(6);
-  margin-bottom: 53px;
+  margin-bottom: 43px;
+
+  @media(min-width: $screen-md) {
+    @include make-col(6);
+    margin-bottom: 53px;
+  }
 }
 
 .excellence__wrap {
   position: relative;
-  padding-left: 35px;
+  padding-left: 32px;
+
+  @media(min-width: $screen-md) {
+    padding-left: 35px;
+  }
 }
 
 .excellence__circle {
   position: absolute;
   top: 0;
-  left: 5px;
+  left: 7px;
   display: block;
   width: 2px;
   height: calc(100% - 15px);
@@ -47,16 +55,25 @@
     border: 5px solid #36a3c6;
     border-radius: 50px;
   }
+
+  @media(min-width: $screen-md) {
+    left: 5px;
+  }
 }
 
 .excellence__text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 16px;
   color: #666;
 
   strong {
     color: #333;
     font-weight: 500;
+  }
+
+  @media(min-width: $screen-md) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
   }
 }

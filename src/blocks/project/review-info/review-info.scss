@@ -1,12 +1,21 @@
 .review-info {
-  max-width: 456px;
+  max-width: 262px;
+  margin-bottom: 45px;
   margin-left: auto;
-  margin-bottom: 55px;
+  margin-right: auto;
 
   &--head {
-    margin-left: initial;
-    max-width: 794px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
+
+    @media(min-width: $screen-md) {
+      margin-left: initial;
+      max-width: 794px;
+    }
+  }
+
+  @media(min-width: $screen-md) {
+    max-width: 456px;
+    margin-bottom: 55px;
   }
 }
 
@@ -21,15 +30,22 @@
 
 .review-info__item-3 {
   @include make-col-ready();
-  // @include make-col(3);
-  max-width: 200px;
+  @include make-col(5);
+
+  @media(min-width: $screen-md) {
+    max-width: 200px;
+  }
 }
 
 
 .review-info__item-5 {
-  @include make-col-ready();
-  // @include make-col(5);
-  max-width: 355px;
+  display: none;
+
+  @media(min-width: $screen-md) {
+    display: block;
+    @include make-col-ready();
+    max-width: 355px;
+  }
 }
 
 .review-info__item-6 {
@@ -39,36 +55,59 @@
 
 .review-info span {
   display: block;
-  margin-bottom: 3px;
-  font-size: 16px;
+  margin-bottom: 5px;
+  font-size: 11px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 11px;
   color: #333333;
+
+  @media(min-width: $screen-md) {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 3px;
+  }
 }
 
 .review-info__price {
   color: #36a3c6;
-  font-size: 36px;
+  font-size: 25px;
   font-weight: 500;
   margin: 0;
 
   sub {
-    font-size: 16px;
+    font-size: 11px;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 11.2px;
     color: #000000;
     bottom: 0;
     margin-left: 6px;
+
+    @media(min-width: $screen-md) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  @media(min-width: $screen-md) {
+    font-size: 36px;
   }
 }
 
 .review-info__text {
   margin-bottom: 0;
-  margin-top: 11px;
-  font-size: 12px;
+  margin-top: 12px;
+  font-size: 8px;
   font-weight: 300;
-  line-height: 15px;
-  max-width: 138px;
+  line-height: 12px;
+  max-width: 98px;
+
+  @media(min-width: $screen-md) {
+    margin-top: 11px;
+    font-size: 8px;
+    font-weight: 300;
+    line-height: 10.5px;
+    max-width: 138px;
+  }
 }
 
 .review-info__desk {

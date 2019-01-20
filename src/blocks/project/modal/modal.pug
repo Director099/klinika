@@ -1,0 +1,17 @@
+mixin modal()
+  .modal.fade(id="modal" tabindex="-1" role="dialog")
+    .modal-dialog.modal-dialog-centered
+      .modal-content.modal--center
+        h3.modal__title Получить консультацию
+        button(type="button" class="modal__close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+        form.form
+          label.field-text
+            input.field-text__input.field-text__input--name(type="text" placeholder="Как вас зовут?" required)
+          label.field-text
+            input.field-text__input.field-text__input--tel(type="tel" placeholder="+7 (___) ___ - __ - __" required)
+          button.btn.btn--main.btn__width Отправить
+          label.form-checkbox
+            input(type="checkbox" required checked)
+            span.form-checkbox__check(aria-label="Согласие на обработку данных")
+            span.form-checkbox__text Я даю свое согласие на обработку #[a(href="#") персональных данных]

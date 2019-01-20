@@ -1,10 +1,18 @@
 .reception {
-  padding-top: 183px;
-  padding-bottom: 95px;
+  padding-top: 227px;
+  padding-bottom: 45px;
   background-image: url("../img/bg-reception.png");
   background-repeat: no-repeat;
   background-color: #e9f0f5;
-  background-position: -285px 0;
+  background-position: 74% 0;
+  background-size: 790px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 227px;
+    padding-bottom: 95px;
+    background-position: -288px 0;
+    background-size: auto;
+  }
 
   @media(min-width: 1400px) {
     background-position: 100% 0;

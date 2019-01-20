@@ -1,4 +1,8 @@
 .tagline {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 400;
+
+  @media(min-width: $screen-md) {
+    font-size: 18px;
+  }
 }

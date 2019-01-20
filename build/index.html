@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/ico" sizes="16x16" href="img/favicon/favicon-16x16.ico">
+    <link rel="icon" type="image/ico" sizes="16x16" href="img/favicon/favicon.ico">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet" href="css/style.min.css">
@@ -29,33 +29,34 @@
 <body>
     <div class="fullpage">
         <div class="container">
-            <div class="page-header"><a class="logo"><img src="img/logo.png" alt="Современный медицинский центр на м. Курская"/></a>
+            <div class="page-header"><a class="logo page-header__logo"><img src="img/logo.png" alt="Современный медицинский центр на м. Курская"/></a>
                 <div class="page-header__right">
                     <nav class="navigation">
                         <ul class="navigation__list">
                             <li class="navigation__item"><a class="navigation__link" href="#about">О клинике</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="#prices">Услуги и цены</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="#address">Как добраться</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#medknizhki">Услуги и цены</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#kontakt">Как добраться</a></li>
                         </ul>
-                    </nav><a class="callback" href="#"><span class="callback__phone">+7 (499) 288-81-19</span>
+                    </nav><a class="callback" data-toggle="modal" data-target="#modal"><span class="callback__phone">+7 (499) 288-81-19</span>
               <p class="callback__text">Заказать обратный звонок</p></a>
+                    <button class="toggle" aria-label="открытие меню"><span class="toggle__span"></span></button>
                 </div>
             </div>
             <div class="main-block">
-                <h1 class="title main-block__title">Современный <span>медицинский центр</span> на м. Курская</h1>
+                <h1 class="title main-block__title">Современный <span>медицинский центр</span> на&nbsp;м. Курская</h1>
                 <p class="main-block__text">Выдача медицинских справок, оформление медицинских книжек, проведение психиатрического освидетельствования. Амбулаторный прием врачей. УЗИ. Медицинские анализы.</p>
                 <form class="form main-block__form">
                     <div class="form__row">
                         <div class="form__col-7">
                             <label class="field-text">
-                                <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __">
+                                <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __" required>
                 </label>
                         </div>
                         <div class="form__col-5">
                             <button class="btn btn--main">Записаться без очереди</button>
                         </div>
                     </div>
-                    <label class="form-checkbox">
+                    <label class="form-checkbox form-checkbox--ml">
                         <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
                     </label>
                 </form>
@@ -78,7 +79,7 @@
         </div>
     </div>
     <main>
-        <div class="section about">
+        <div class="section about" id="about">
             <div class="container">
                 <div class="section__header">
                     <h2 class="title">Клиника <span>на Курской</span></h2>
@@ -92,12 +93,12 @@
                     </li>
                     <li class="excellence__item">
                         <div class="excellence__wrap"><span class="excellence__circle"></span>
-                            <p class="excellence__text"><strong>Основная специализация центра -</strong> амбулатурный прием пациентов, медицинская диагностика, проведение медицинских осмотров и выдача официальных заключений и справок.</p>
+                            <p class="excellence__text"><strong>Основная специализация центра -</strong> амбулатурный прием пациентов, медицинская диагностика, проведение медицинских осмотров и&nbsp;выдача официальных заключений и&nbsp;справок.</p>
                         </div>
                     </li>
                     <li class="excellence__item">
                         <div class="excellence__wrap"><span class="excellence__circle"></span>
-                            <p class="excellence__text"><strong>Врачи центра - специалисты высшей категории</strong> с многолетним опытом работы, сертифицированые по специальности профпатология.</p>
+                            <p class="excellence__text"><strong>Врачи центра - специалисты высшей категории</strong> с&nbsp;многолетним опытом работы, сертифицированые по&nbsp;специальности профпатология.</p>
                         </div>
                     </li>
                     <li class="excellence__item">
@@ -111,47 +112,47 @@
                         <p class="advantages__text">Оказываем медицнские услуги</p>
                     </li>
                     <li class="advantages__item"><strong class="advantages__title">Находимся в центре Москвы</strong>
-                        <p class="advantages__text">5 минут от метро Курская, 5 минут от Курского вокзала</p>
+                        <p class="advantages__text">5&nbsp;минут от&nbsp;метро Курская, 5&nbsp;минут от&nbsp;Курского вокзала</p>
                     </li>
                     <li class="advantages__item"><strong class="advantages__title">Высокий уровень сервиса</strong>
-                        <p class="advantages__text">Центр оборудован по европейским стандартам качества.</p>
+                        <p class="advantages__text">Центр оборудован по&nbsp;европейским стандартам качества.</p>
                     </li>
                     <li class="advantages__item"><strong class="advantages__title">300 медицинских справок</strong>
-                        <p class="advantages__text">Выдаем каждый день, работаем 7 дней в неделю</p>
+                        <p class="advantages__text">Выдаем каждый день, работаем 7&nbsp;дней в&nbsp;неделю</p>
                     </li>
                 </ol>
             </div>
         </div>
-        <div class="section services">
+        <div class="section services" id="uslugi">
             <div class="container">
                 <section class="section__header section__header--center">
                     <h2 class="title">Наши <span>услуги</span></h2>
-                    <p class="tagline">Ознакомьтесь со списком услуг, которые мы предоставляем</p>
+                    <p class="tagline services__tagline">Ознакомьтесь со&nbsp;списком услуг, которые мы&nbsp;предоставляем</p>
                 </section>
                 <div class="review">
                     <div class="review__row">
-                        <div class="review__col">
-                            <section class="review__content">
-                                <h3 class="review__title">Выдача медицинских справок</h3>
-                                <p class="review__text">Медицинские справки требуются почти при любой жизненной ситуации. Каждый из нас устраивался на новую работу, поступал в учебное заведение, пропускал занятия, из за болезни не ходил на работу, сдавал анализы для бассейна.</p>
-                            </section>
-                            <form class="form">
-                                <div class="form__row">
-                                    <div class="form__col-7">
-                                        <label class="field-text">
-                                            <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __">
+                        <div class="review__col review__row--reverse"><img class="review__img" src="img/med-spravka.png" alt="медицинская справка"></div>
+                            <div class="review__col">
+                                <section class="review__content">
+                                    <h3 class="review__title">Выдача медицинских справок</h3>
+                                    <p class="review__text">Медицинские справки требуются почти при любой жизненной ситуации. Каждый из&nbsp;нас устраивался на&nbsp;новую работу, поступал в&nbsp;учебное заведение, пропускал занятия, из&nbsp;за&nbsp;болезни не&nbsp;ходил на&nbsp;работу, сдавал анализы для бассейна.</p>
+                                </section>
+                                <form class="form form--center-mb">
+                                    <div class="form__row form__row--mb-phone">
+                                        <div class="form__col-7">
+                                            <label class="field-text section__label-ident">
+                                                <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __" required>
                       </label>
+                                        </div>
+                                        <div class="form__col-5">
+                                            <button class="btn btn--main">Записаться без очереди</button>
+                                        </div>
                                     </div>
-                                    <div class="form__col-5">
-                                        <button class="btn btn--main">Записаться без очереди</button>
-                                    </div>
-                                </div>
-                                <label class="form-checkbox">
-                                    <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="review__col"><img class="review__img" src="img/med-spravka.png" alt="медицинская справка"></div>
+                                    <label class="form-checkbox form-checkbox--ml form-checkbox--mini">
+                                        <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
+                                    </label>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div class="review-info">
@@ -164,7 +165,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="price-list"><a class="price-list__title" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления медицинских справок</a>
+                    <div class="price-list"><a class="price-list__title collapsed" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления<span class="price-list__arrow" aria-label="Стрелка открытия колапса"></span></a>
                         <div class="collapse price-list__collapse" id="collaps-1">
                             <table class="table price-list__table">
                                 <caption class="table__caption">Справки для работы</caption>
@@ -239,140 +240,28 @@
                     </div>
                 </div>
             </div>
-            <div class="section med-book">
+            <div class="section med-book" id="medknizhki">
                 <div class="container">
                     <div class="review">
-                        <div class="review__row review__row--ai-c">
-                            <div class="review__col">
-                                <section class="review__content">
-                                    <h3 class="review__title">Оформление медицинских книжек</h3>
-                                    <p class="review__text">Потребуется при устройстве на работу связанную с учебным процессом, продуктами питания, бытовым обслуживанием, медучреждениями, общественным транспортом и многих других сфер занятости</p>
-                                </section>
-                                <form class="form">
-                                    <div class="form__row">
-                                        <div class="form__col-7">
-                                            <label class="field-text">
-                                                <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __">
-                      </label>
-                                        </div>
-                                        <div class="form__col-5">
-                                            <button class="btn btn--main">Записаться без очереди</button>
-                                        </div>
-                                    </div>
-                                    <label class="form-checkbox">
-                                        <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
-                                    </label>
-                                </form>
-                            </div>
+                        <div class="review__row review__row--ai-c review__row--reverse">
                             <div class="review__col"><img src="img/imb-book.png" alt="Медицинская книжка"></div>
-                            </div>
-                        </div>
-                        <div class="review-info">
-                            <ul class="review-info__list review-info__list--jc-sb">
-                                <li class="review-info__item-3"><span>стоимость от</span>
-                                    <p class="review-info__price">1000<sub>руб.</sub></p>
-                                </li>
-                                <li class="review-info__item-3"><span>время выдачи</span>
-                                    <p class="review-info__price">15<sub>мин.</sub></p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="price-list"><a class="price-list__title" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления медицинских справок</a>
-                            <div class="collapse price-list__collapse" id="collaps-1">
-                                <table class="table price-list__table">
-                                    <caption class="table__caption">Справки для работы</caption>
-                                    <tr>
-                                        <td>1. Справка 302Н для работы</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2. Справка 086У для работы</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3. Водительская справка для работы</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4. Справка от нарколога для работы</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5. Справка от психиатра для работы</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6. Справка 002ОУ для работы</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7. Справка 003ОУ для работы</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8. Справка ХТИ для работы</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                </table>
-                                <table class="table price-list__table">
-                                    <caption class="table__caption">Справки охранникам</caption>
-                                    <tr>
-                                        <td>1. Справка 002ОУ охранникам</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2. Справка 003ОУ охранникам</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3. Справка ХТИ охранникам</td>
-                                        <td><span>1500</span> руб</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4. Справка от нарколога охранникам</td>
-                                        <td><span>1500</span> руб</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5. Справка от психиатра охранникам</td>
-                                        <td><span>1500</span> руб</td>
-                                    </tr>
-                                </table>
-                                <table class="table price-list__table">
-                                    <caption class="table__caption">Справки студентам</caption>
-                                    <tr>
-                                        <td>1. Справка 086У в ВУЗ</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2. Справка 095У в ВУЗ</td>
-                                        <td><span>1500</span> руб.</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section commission">
-                    <div class="container">
-                        <div class="review">
-                            <div class="review__row">
                                 <div class="review__col">
-                                    <section class="review__content commission__content">
-                                        <h3 class="review__title">Прохождение медицинской комиссии</h3>
-                                        <p class="review__text">Водительская медкомиссия, психиатрическое освидетельствование, профосмотры</p>
+                                    <section class="review__content">
+                                        <h3 class="review__title">Оформление медицинских книжек</h3>
+                                        <p class="review__text">Потребуется при устройстве на&nbsp;работу связанную с&nbsp;учебным процессом, продуктами питания, бытовым обслуживанием, медучреждениями, общественным транспортом и&nbsp;многих других сфер занятости</p>
                                     </section>
-                                    <form class="form">
-                                        <div class="form__row">
+                                    <form class="form form--center-mb">
+                                        <div class="form__row form__row--mb-phone">
                                             <div class="form__col-7">
-                                                <label class="field-text">
-                                                    <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __">
+                                                <label class="field-text section__label-ident">
+                                                    <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __" required>
                       </label>
                                             </div>
                                             <div class="form__col-5">
                                                 <button class="btn btn--main">Записаться без очереди</button>
                                             </div>
                                         </div>
-                                        <label class="form-checkbox">
+                                        <label class="form-checkbox form-checkbox--ml form-checkbox--mini">
                                             <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
                                         </label>
                                     </form>
@@ -389,7 +278,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="price-list"><a class="price-list__title" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления медицинских справок</a>
+                        <div class="price-list"><a class="price-list__title collapsed" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления<span class="price-list__arrow" aria-label="Стрелка открытия колапса"></span></a>
                             <div class="collapse price-list__collapse" id="collaps-1">
                                 <table class="table price-list__table">
                                     <caption class="table__caption">Справки для работы</caption>
@@ -464,27 +353,139 @@
                         </div>
                     </div>
                 </div>
-                <div class="section research">
+                <div class="section commission" id="medkom">
                     <div class="container">
                         <div class="review">
                             <div class="review__row">
                                 <div class="review__col">
-                                    <section class="review__content">
-                                        <h3 class="review__title">Проведение ультрозвуковых исследований (УЗИ)</h3>
-                                        <p class="review__text">Процедура имеет широчайший спектр показаний и активно применяется для диагностики заболеваний самых различных систем организма. Также проводится в профилактических целях и с целью контроля за результатами лечения, при беременности.</p>
+                                    <section class="review__content commission__content">
+                                        <h3 class="review__title">Прохождение медицинской комиссии</h3>
+                                        <p class="review__text">Водительская медкомиссия, психиатрическое освидетельствование, профосмотры</p>
                                     </section>
-                                    <form class="form">
-                                        <div class="form__row">
+                                    <form class="form form--center-mb">
+                                        <div class="form__row form__row--mb-phone">
                                             <div class="form__col-7">
-                                                <label class="field-text">
-                                                    <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __">
+                                                <label class="field-text section__label-ident">
+                                                    <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __" required>
                       </label>
                                             </div>
                                             <div class="form__col-5">
                                                 <button class="btn btn--main">Записаться без очереди</button>
                                             </div>
                                         </div>
-                                        <label class="form-checkbox">
+                                        <label class="form-checkbox form-checkbox--ml form-checkbox--mini">
+                                            <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-info">
+                            <ul class="review-info__list review-info__list--jc-sb">
+                                <li class="review-info__item-3"><span>стоимость от</span>
+                                    <p class="review-info__price">1000<sub>руб.</sub></p>
+                                </li>
+                                <li class="review-info__item-3"><span>время выдачи</span>
+                                    <p class="review-info__price">15<sub>мин.</sub></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="price-list"><a class="price-list__title collapsed" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления<span class="price-list__arrow" aria-label="Стрелка открытия колапса"></span></a>
+                            <div class="collapse price-list__collapse" id="collaps-1">
+                                <table class="table price-list__table">
+                                    <caption class="table__caption">Справки для работы</caption>
+                                    <tr>
+                                        <td>1. Справка 302Н для работы</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2. Справка 086У для работы</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3. Водительская справка для работы</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4. Справка от нарколога для работы</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5. Справка от психиатра для работы</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6. Справка 002ОУ для работы</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7. Справка 003ОУ для работы</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8. Справка ХТИ для работы</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                </table>
+                                <table class="table price-list__table">
+                                    <caption class="table__caption">Справки охранникам</caption>
+                                    <tr>
+                                        <td>1. Справка 002ОУ охранникам</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2. Справка 003ОУ охранникам</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3. Справка ХТИ охранникам</td>
+                                        <td><span>1500</span> руб</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4. Справка от нарколога охранникам</td>
+                                        <td><span>1500</span> руб</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5. Справка от психиатра охранникам</td>
+                                        <td><span>1500</span> руб</td>
+                                    </tr>
+                                </table>
+                                <table class="table price-list__table">
+                                    <caption class="table__caption">Справки студентам</caption>
+                                    <tr>
+                                        <td>1. Справка 086У в ВУЗ</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2. Справка 095У в ВУЗ</td>
+                                        <td><span>1500</span> руб.</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section research" id="uzi">
+                    <div class="container">
+                        <div class="review">
+                            <div class="review__row">
+                                <div class="review__col">
+                                    <section class="review__content">
+                                        <h3 class="review__title">Проведение ультрозвуковых исследований (УЗИ)</h3>
+                                        <p class="review__text">Процедура имеет широчайший спектр показаний и&nbsp;активно применяется для диагностики заболеваний самых различных систем организма. Также проводится в&nbsp;профилактических целях и&nbsp;с&nbsp;целью контроля за&nbsp;результатами лечения, при беременности.</p>
+                                    </section>
+                                    <form class="form form--center-mb">
+                                        <div class="form__row form__row--mb-phone">
+                                            <div class="form__col-7">
+                                                <label class="field-text section__label-ident">
+                                                    <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __" required>
+                      </label>
+                                            </div>
+                                            <div class="form__col-5">
+                                                <button class="btn btn--main">Записаться без очереди</button>
+                                            </div>
+                                        </div>
+                                        <label class="form-checkbox form-checkbox--ml form-checkbox--mini">
                                             <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
                                         </label>
                                     </form>
@@ -501,7 +502,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="price-list"><a class="price-list__title" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления медицинских справок</a>
+                        <div class="price-list"><a class="price-list__title collapsed" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления<span class="price-list__arrow" aria-label="Стрелка открытия колапса"></span></a>
                             <div class="collapse price-list__collapse" id="collaps-1">
                                 <table class="table price-list__table">
                                     <caption class="table__caption">Справки для работы</caption>
@@ -576,32 +577,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="section laboratory">
+                <div class="section laboratory" id="lab">
                     <div class="container">
                         <div class="review">
-                            <div class="review__row">
-                                <div class="review__col">
-                                    <section class="review__content">
-                                        <h3 class="review__title">Все виды лабораторных анализов</h3>
-                                        <p class="review__text">Высокоточное оборудование последнего поколения, используемое лабораториями «Клиника на Курской», позволяет проводить исследования в автоматическом режиме и в кратчайшие сроки. Все исследования выполняются на автоматических анализаторах закрытого типа с использованием фирменных реагентов и калибраторов.</p>
-                                    </section>
-                                    <form class="form">
-                                        <div class="form__row">
-                                            <div class="form__col-7">
-                                                <label class="field-text">
-                                                    <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __">
-                      </label>
-                                            </div>
-                                            <div class="form__col-5">
-                                                <button class="btn btn--main">Записаться без очереди</button>
-                                            </div>
-                                        </div>
-                                        <label class="form-checkbox">
-                                            <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
-                                        </label>
-                                    </form>
-                                </div>
+                            <div class="review__row review__row--reverse">
                                 <div class="review__col"><img class="review__img" src="img/img-lab.png" alt="Лабораторные анализы"></div>
+                                    <div class="review__col">
+                                        <section class="review__content">
+                                            <h3 class="review__title">Все виды лабораторных анализов</h3>
+                                            <p class="review__text">Высокоточное оборудование последнего поколения, используемое лабораториями &laquo;Клиника на&nbsp;Курской&raquo;, позволяет проводить исследования в&nbsp;автоматическом режиме и&nbsp;в&nbsp;кратчайшие сроки. Все исследования выполняются на&nbsp;автоматических анализаторах закрытого типа с&nbsp;использованием фирменных реагентов и&nbsp;калибраторов.</p>
+                                        </section>
+                                        <form class="form form--center-mb">
+                                            <div class="form__row form__row--mb-phone">
+                                                <div class="form__col-7">
+                                                    <label class="field-text section__label-ident">
+                                                        <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __" required>
+                      </label>
+                                                </div>
+                                                <div class="form__col-5">
+                                                    <button class="btn btn--main">Записаться без очереди</button>
+                                                </div>
+                                            </div>
+                                            <label class="form-checkbox form-checkbox--ml form-checkbox--mini">
+                                                <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
+                                            </label>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                             <div class="review-info">
@@ -614,7 +615,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="price-list"><a class="price-list__title" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления медицинских справок</a>
+                            <div class="price-list"><a class="price-list__title collapsed" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления<span class="price-list__arrow" aria-label="Стрелка открытия колапса"></span></a>
                                 <div class="collapse price-list__collapse" id="collaps-1">
                                     <table class="table price-list__table">
                                         <caption class="table__caption">Справки для работы</caption>
@@ -689,7 +690,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section reception">
+                    <div class="section reception" id="priem">
                         <div class="container">
                             <div class="review">
                                 <div class="review__row">
@@ -698,18 +699,18 @@
                                             <h3 class="review__title">Амбулаторный прием врачей</h3>
                                             <p class="review__text">Амбулаторный прием врачей по следующим специальностям: Терапевт, ЛОР, Хирург, Гинеколог, Дерматолог-венеролог.</p>
                                         </section>
-                                        <form class="form">
-                                            <div class="form__row">
+                                        <form class="form form--center-mb">
+                                            <div class="form__row form__row--mb-phone">
                                                 <div class="form__col-7">
-                                                    <label class="field-text">
-                                                        <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __">
+                                                    <label class="field-text section__label-ident">
+                                                        <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __" required>
                       </label>
                                                 </div>
                                                 <div class="form__col-5">
                                                     <button class="btn btn--main">Записаться без очереди</button>
                                                 </div>
                                             </div>
-                                            <label class="form-checkbox">
+                                            <label class="form-checkbox form-checkbox--ml form-checkbox--mini">
                                                 <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#"> персональных данных</a></span>
                                             </label>
                                         </form>
@@ -726,7 +727,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="price-list"><a class="price-list__title" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления медицинских справок</a>
+                            <div class="price-list"><a class="price-list__title collapsed" data-toggle="collapse" href="#collaps-1" role="button">Стоимость оформления<span class="price-list__arrow" aria-label="Стрелка открытия колапса"></span></a>
                                 <div class="collapse price-list__collapse" id="collaps-1">
                                     <table class="table price-list__table">
                                         <caption class="table__caption">Справки для работы</caption>
@@ -801,67 +802,107 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section licenses">
+                    <div class="section licenses" id="litsenzii">
                         <div class="container">
                             <section class="section__header section__header--center licenses__header">
                                 <h2 class="title licenses__title">Имеем <span>допуски и лицензии</span> <br> на все необходимые медицинские работы</h2>
                             </section>
-                            <div class="licenses__slider owl-carousel owl-theme"><a class="licenses__item" href="img/sert.jpg" data-fancybox><img src="img/sert.jpg" alt="Сертификат"></a><a class="licenses__item" href="img/sert.jpg" data-fancybox><img src="img/sert.jpg" alt="Сертификат"></a><a class="licenses__item" href="img/sert.jpg" data-fancybox><img src="img/sert.jpg" alt="Сертификат"></a><a class="licenses__item" href="img/sert.jpg" data-fancybox><img src="img/sert.jpg" alt="Сертификат"></a></div>
+                            <div class="licenses__slider owl-carousel owl-theme"><a class="licenses__item" href="img/sert.jpg" data-fancybox><img src="img/sert.jpg" alt="Сертификат">
+              <div class="licenses__hidden">
+                <div class="licenses__increase"></div>
+                <p class="licenses__text">Лицензия</p>
+              </div></a><a class="licenses__item" href="img/sert.jpg" data-fancybox><img src="img/sert.jpg" alt="Сертификат">
+              <div class="licenses__hidden">
+                <div class="licenses__increase"></div>
+                <p class="licenses__text">Лицензия</p>
+              </div></a><a class="licenses__item" href="img/sert.jpg" data-fancybox><img src="img/sert.jpg" alt="Сертификат">
+              <div class="licenses__hidden">
+                <div class="licenses__increase"></div>
+                <p class="licenses__text">Лицензия</p>
+              </div></a><a class="licenses__item" href="img/sert.jpg" data-fancybox><img src="img/sert.jpg" alt="Сертификат">
+              <div class="licenses__hidden">
+                <div class="licenses__increase"></div>
+                <p class="licenses__text">Лицензия</p>
+              </div></a></div>
                         </div>
                     </div>
-                    <div class="section contact">
+                    <div class="section contact" id="kontakt">
                         <div class="container">
                             <div class="section__row section__row--jc-sb">
-                                <div class="section__col">
-                                    <h2 class="contact__title">Контактная <br> информация</h2>
-                                        <ul class="contact__list">
-                                            <li class="contact__item"><span class="contact__name-address">Наш адрес</span><strong class="contact__address">Москва, ул. Земляной вал, д.7.</strong>
-                                                <p class="contact__desk">1-я линия садового кольца, 5 минут от метро Курская, 5 минут от Курского вокзала</p>
-                                            </li>
-                                            <li class="contact__item"><span class="contact__name-address">График работы</span><strong class="contact__address">без выходных</strong></li>
-                                            <li class="contact__item"><span class="contact__name-address">E-mail</span><a class="contact__address" href="mailto:info@profmos.ru">info@profmos.ru</a></li>
-                                            <li class="contact__item"><span class="contact__name-address">Телефон</span><a class="contact__address" href="tel:+7(978)0000000">+7 (978) 000 - 00 - 00</a></li>
-                                        </ul>
-                                </div>
-                                <div class="section__col">
+                                <div class="section__col contact__ident">
                                     <h2 class="contact__title">Остались вопросы? Получите бесплатную консультацию</h2>
                                     <form class="form">
                                         <div class="form__row">
                                             <div class="form__col">
                                                 <label class="field-text">
-                                                    <input class="field-text__input field-text__input--name" type="text" placeholder="Как вас зовут?">
+                                                    <input class="field-text__input field-text__input--name" type="text" placeholder="Как вас зовут?" required>
                     </label>
                                             </div>
                                             <div class="form__col">
                                                 <label class="field-text">
-                                                    <input class="field-text__input field-text__input--tel" type="tel">
+                                                    <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __" required>
                     </label>
                                             </div>
                                         </div>
                                         <label class="field-text">
-                                            <textarea class="field-text__input field-text__input--message" placeholder="Опишите ваш вопрос"></textarea>
+                                            <textarea class="field-text__input field-text__input--message" placeholder="Опишите ваш вопрос" required></textarea>
                                         </label>
-                                        <div class="form__row">
+                                        <div class="form__row form__row--ai-c">
                                             <div class="form__col">
                                                 <button class="btn btn--main">Записаться без очереди</button>
                                             </div>
                                             <div class="form__col">
-                                                <label class="form-checkbox">
-                                                    <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку персональных данных</span>
+                                                <label class="form-checkbox form-checkbox--mb-none">
+                                                    <input type="checkbox" required checked><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#">персональных данных</a></span>
                                                 </label>
                                             </div>
                                         </div>
                                     </form>
+                                </div>
+                                <div class="section__col">
+                                    <h2 class="contact__title">Контактная <br> информация</h2>
+                                        <ul class="contact__list">
+                                            <li class="contact__item"><span class="contact__name-address">Наш адрес</span><strong class="contact__address contact__address--point">Москва, ул. Земляной вал, д.7.</strong>
+                                                <p class="contact__desk">1-я линия садового кольца, 5 минут от метро Курская, 5 минут от Курского вокзала</p>
+                                            </li>
+                                            <li class="contact__item"><span class="contact__name-address">График работы</span><strong class="contact__address contact__address--calendar">без выходных</strong></li>
+                                            <li class="contact__item"><span class="contact__name-address">E-mail</span><a class="contact__address contact__address--mail" href="mailto:info@profmos.ru">info@profmos.ru</a></li>
+                                            <li class="contact__item"><span class="contact__name-address">Телефон</span><a class="contact__address contact__address--phone" href="tel:+7(978)0000000">+7 (978) 000 - 00 - 00</a></li>
+                                        </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
     </main>
     <div class="map">
-        <script type="text/javascript" charset="utf-8" async="async" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa39025c2746a5b110426b90314d5c204e69e325b39152f5281c2dd160d12e3c5&amp;amp;width=100%25&amp;amp;height=503&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+        <script type="text/javascript" charset="utf-8" async="async" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa39025c2746a5b110426b90314d5c204e69e325b39152f5281c2dd160d12e3c5&amp;amp;width=100%25&amp;amp;height=100%&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
     </div>
-    <div class="page-footer">
-        <div class="page-footer__info"><a class="logo"><img src="" alt="Современный медицинский центр на м. Курская"/></a><a href="#">Политика конфиденциальности</a></div><a class="page-footer__develop"><img src="" alt="Веб студия «People Plans» — Разработка сайтов и лендингов"/></a>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="page-footer__row">
+                <div class="page-footer__info"><a class="logo page-footer__logo"><img src="img/logo-wh.png" alt="Современный медицинский центр на м. Курская"/></a><a class="page-footer__link" href="#">Политика конфиденциальности</a></div><a class="page-footer__develop"><img src="img/by-pplans-chb-on-bl.svg" alt="Веб студия «People Plans» — Разработка сайтов и лендингов"/></a>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal--center">
+                <h3 class="modal__title">Получить консультацию</h3>
+                <button class="modal__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <form class="form">
+                    <label class="field-text">
+                        <input class="field-text__input field-text__input--name" type="text" placeholder="Как вас зовут?" required="required"/>
+            </label>
+                        <label class="field-text">
+                            <input class="field-text__input field-text__input--tel" type="tel" placeholder="+7 (___) ___ - __ - __" required="required"/>
+            </label>
+                            <button class="btn btn--main btn__width">Отправить</button>
+                            <label class="form-checkbox">
+                                <input type="checkbox" required="required" checked="checked"/><span class="form-checkbox__check" aria-label="Согласие на обработку данных"></span><span class="form-checkbox__text">Я даю свое согласие на обработку <a href="#">персональных данных</a></span>
+                            </label>
+                </form>
+            </div>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

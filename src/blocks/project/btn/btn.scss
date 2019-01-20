@@ -3,10 +3,18 @@
   border-radius: 50px;
   background-color: $white;
   border: none;
-  padding: 9px 30px;
-  font-size: 14px;
+  padding: 7px 30px;
+  font-size: 9px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 20.02px;
+  width: 100%;
+
+  @media (min-width: $screen-md) {
+    font-size: 14px;
+    line-height: 30px;
+    width: auto;
+    padding: 9px 30px;
+  }
 
   &--main {
     color: $white;

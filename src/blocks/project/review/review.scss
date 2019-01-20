@@ -1,9 +1,21 @@
 .review {
-  margin-bottom: 10px;
+  margin-bottom: 35px;
+
+  @media(min-width: $screen-md) {
+    margin-bottom: 10px;
+  }
 }
 
 .review__row {
   @include make-row();
+
+
+  &--reverse {
+    @media(min-width: $screen-md) {
+      flex-direction: row-reverse;
+    }
+  }
+
 
   &--ai-c {
     align-items: center;
@@ -12,27 +24,47 @@
 
 .review__col {
   @include make-col-ready();
-  @include make-col(6);
+
+  @media(min-width: $screen-md) {
+    @include make-col(6);
+  }
 }
 
 .review__title {
-  font-size: 27px;
-  line-height: 37px;
+  font-size: 18px;
+  line-height: 25px;
   font-weight: 500;
   color: #333333;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+
+  @media(min-width: $screen-md) {
+    font-size: 27px;
+    line-height: 37px;
+    margin-bottom: 20px;
+  }
 }
 
 .review__text {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 23px;
+  line-height: 17px;
   color: #666;
-  margin-bottom: 52px;
+  margin-bottom: 28px;
+
+  @media(min-width: $screen-md) {
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 52px;
+  }
 }
 
 .review__img {
   display: block;
   margin-left: auto;
-  margin-top: -60px;
+  margin-top: 0px;
+  margin-bottom: 37px;
+
+  @media(min-width: $screen-md) {
+    margin-top: -60px;
+  }
 }

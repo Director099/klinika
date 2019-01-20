@@ -1,4 +1,8 @@
 .fullpage {
-  padding-bottom: 73px;
+  padding-bottom: 32px;
   background: url("../img/bg-header.png") no-repeat center / cover;
+
+  @media(min-width: $screen-md) {
+    padding-bottom: 73px;
+  }
 }

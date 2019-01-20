@@ -26,17 +26,20 @@
 @import "fonts";
 @import "global";
 
-@import "../blocks/project/page-header/page-header";
-@import "../blocks/project/page-footer/page-footer";
 @import "../blocks/project/container/container";
 @import "../blocks/project/table/table";
 @import "../blocks/project/logo/logo";
+@import "../blocks/project/map/map";
+@import "../blocks/project/field-text/field-text";
+@import "../blocks/project/section/section";
+@import "../blocks/project/page-header/page-header";
+@import "../blocks/project/page-footer/page-footer";
 @import "../blocks/project/btn/btn";
 @import "../blocks/project/navigation/navigation";
 @import "../blocks/project/callback/callback";
 @import "../blocks/project/title/title";
 @import "../blocks/project/tagline/tagline";
-@import "../blocks/project/field-text/field-text";
+
 @import "../blocks/project/form-checkbox/form-checkbox";
 @import "../blocks/project/main-block/main-block";
 @import "../blocks/project/form/form";
@@ -44,7 +47,7 @@
 @import "../blocks/project/fullpage/fullpage";
 @import "../blocks/project/advantages/advantages";
 @import "../blocks/project/excellence/excellence";
-@import "../blocks/project/section/section";
+
 @import "../blocks/project/about/about";
 @import "../blocks/project/services/services";
 @import "../blocks/project/review/review";
@@ -56,3 +59,5 @@
 @import "../blocks/project/reception/reception";
 @import "../blocks/project/licenses/licenses";
 @import "../blocks/project/contact/contact";
+@import "../blocks/project/modal/modal";
+@import "../blocks/project/toggle/toggle";

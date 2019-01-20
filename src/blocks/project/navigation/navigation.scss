@@ -4,8 +4,12 @@
 
 .navigation__list {
   @include ul-none();
-  display: flex;
+  display: none;
   margin-right: 60px;
+
+  @media(min-width: $screen-xl) {
+    display: flex;
+  }
 }
 
 .navigation__link {

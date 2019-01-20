@@ -1,10 +1,13 @@
 mixin page-footer()
   .map
-    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa39025c2746a5b110426b90314d5c204e69e325b39152f5281c2dd160d12e3c5&amp;width=100%25&amp;height=503&amp;lang=ru_RU&amp;scroll=false")
-  .page-footer
-    .page-footer__info
-      a.logo
-        img(src="", alt="Современный медицинский центр на м. Курская")
-      a(href="#") Политика конфиденциальности
-    a.page-footer__develop
-      img(src="", alt="Веб студия «People Plans» — Разработка сайтов и лендингов")
+    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa39025c2746a5b110426b90314d5c204e69e325b39152f5281c2dd160d12e3c5&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
+  footer.page-footer
+    .container
+      .page-footer__row
+        .page-footer__info
+          a.logo.page-footer__logo
+            img(src="img/logo-wh.png", alt="Современный медицинский центр на м. Курская")
+          a.page-footer__link(href="#") Политика конфиденциальности
+        a.page-footer__develop
+          img(src="img/by-pplans-chb-on-bl.svg", alt="Веб студия «People Plans» — Разработка сайтов и лендингов")
+  +modal()

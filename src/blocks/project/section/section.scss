@@ -1,10 +1,19 @@
 .section {
-  padding-top: 85px;
-  padding-bottom: 85px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media(min-width: $screen-md) {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
 }
 
 .section__header {
-  margin-bottom: 100px;
+  margin-bottom: 45px;
+
+  @media(min-width: $screen-md) {
+    margin-bottom: 98px;
+  }
 
   &--center {
     text-align: center;
@@ -14,6 +23,10 @@
 .section__row {
   @include make-row();
 
+  @media(min-width: $screen-md) {
+    flex-direction: row;
+  }
+
   &--jc-sb {
     justify-content: space-between;
   }
@@ -22,4 +35,8 @@
 .section__col {
   @include make-col-ready();
   max-width: 560px;
+}
+
+.section__label-ident {
+  margin-bottom: 14px;
 }
