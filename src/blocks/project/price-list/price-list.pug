@@ -3,54 +3,55 @@ mixin price-list(name)
     a.price-list__title.collapsed(data-toggle="collapse" href="#"+ name role="button") Стоимость оформления
       span.price-list__arrow(aria-label="Стрелка открытия колапса")
     .collapse.price-list__collapse(id= name)
-      table.table.price-list__table
-        caption.table__caption Справки для работы
-        tr
-          td 1. Справка 302Н для работы
-          td #[span 1500] руб.
-        tr
-          td 2. Справка 086У для работы
-          td #[span 1500] руб.
-        tr
-          td 3. Водительская справка для работы
-          td #[span 1500] руб.
-        tr
-          td 4. Справка от нарколога для работы
-          td #[span 1500] руб.
-        tr
-          td 5. Справка от психиатра для работы
-          td #[span 1500] руб.
-        tr
-          td 6. Справка 002ОУ для работы
-          td #[span 1500] руб.
-        tr
-          td 7. Справка 003ОУ для работы
-          td #[span 1500] руб.
-        tr
-          td 8. Справка ХТИ для работы
-          td #[span 1500] руб.
-      table.table.price-list__table
-        caption.table__caption Справки охранникам
-        tr
-          td 1. Справка 002ОУ охранникам
-          td #[span 1500] руб.
-        tr
-          td 2. Справка 003ОУ охранникам
-          td #[span 1500] руб.
-        tr
-          td 3. Справка ХТИ охранникам
-          td #[span 1500] руб
-        tr
-          td 4. Справка от нарколога охранникам
-          td #[span 1500] руб
-        tr
-          td 5. Справка от психиатра охранникам
-          td #[span 1500] руб
-      table.table.price-list__table
-        caption.table__caption Справки студентам
-        tr
-          td 1. Справка 086У в ВУЗ
-          td #[span 1500] руб.
-        tr
-          td 2. Справка 095У в ВУЗ
-          td #[span 1500] руб.
+      .price-list__wrap
+        table.table.price-list__table
+          caption.table__caption Справки для работы
+          tr
+            td 1. Справка 302Н для работы
+            td #[span 1500] руб.
+          tr
+            td 2. Справка 086У для работы
+            td #[span 1500] руб.
+          tr
+            td 3. Водительская справка для работы
+            td #[span 1500] руб.
+          tr
+            td 4. Справка от нарколога для работы
+            td #[span 1500] руб.
+          tr
+            td 5. Справка от психиатра для работы
+            td #[span 1500] руб.
+          tr
+            td 6. Справка 002ОУ для работы
+            td #[span 1500] руб.
+          tr
+            td 7. Справка 003ОУ для работы
+            td #[span 1500] руб.
+          tr
+            td 8. Справка ХТИ для работы
+            td #[span 1500] руб.
+        table.table.price-list__table
+          caption.table__caption Справки охранникам
+          tr
+            td 1. Справка 002ОУ охранникам
+            td #[span 1500] руб.
+          tr
+            td 2. Справка 003ОУ охранникам
+            td #[span 1500] руб.
+          tr
+            td 3. Справка ХТИ охранникам
+            td #[span 1500] руб
+          tr
+            td 4. Справка от нарколога охранникам
+            td #[span 1500] руб
+          tr
+            td 5. Справка от психиатра охранникам
+            td #[span 1500] руб
+        table.table.price-list__table
+          caption.table__caption Справки студентам
+          tr
+            td 1. Справка 086У в ВУЗ
+            td #[span 1500] руб.
+          tr
+            td 2. Справка 095У в ВУЗ
+            td #[span 1500] руб.
