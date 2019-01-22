@@ -1,10 +1,17 @@
 'use strict';
 
-// $(function () {
-//     $.scrollUp({
-//         scrollText: '',
-//     });
-// });
+function removeMenu() {
+  $("body").removeClass("overflow");
+  $(".toggle").removeClass("toggle--active");
+  $(".navigation").fadeOut();
+}
+
+$(document).ready(function() {
+  var windowWidth = $(window).width();
+  if(windowWidth < 768) {
+    $(".callback").removeAttr("data-toggle")
+  }
+});
 
 $('input[type=tel]').mask("+7 (000) 000 00 00");
 
@@ -25,25 +32,32 @@ $(".licenses__slider").owlCarousel({
   nav: true,
   dots: false,
   responsive:{
-      0:{
-          items:1
-      },
-      768:{
-          items:2
-      },
-      1200:{
-          items:4
+    0:{
+        items:1
+    },
+    768:{
+        items:2
+    },
+    1200:{
+        items:4
       }
   }
 })
+
+$(".navigation__link").on("click", function() {
+  removeMenu();
+})
+
+
 
 
 $(".toggle").on("click", function() {
   $(".toggle").toggleClass("toggle--active");
 
   if(!$(".toggle").hasClass("toggle--active")) {
-    $(".navigation").fadeOut();
+    removeMenu()
   } else {
+    $("body").addClass("overflow");
     $(".navigation").fadeIn();
   }
 })
